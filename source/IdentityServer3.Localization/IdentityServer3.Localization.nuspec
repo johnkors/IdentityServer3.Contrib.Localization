@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" ?>
+<package>
+  <metadata>
+    <id>IdentityServer3.Localization</id>
+    <title>Thinktecture IdentityServer3 - Localization</title>
+    <version>$version$</version>
+    <authors>John Korsnes</authors>
+    <description>Contrib implementation of ILocalizationService in IdentityServerv3 for multiple languages</description>
+    <projectUrl>http://github.com/nrkno/IdentityServer3.Contrib.Localization </projectUrl>
+    <iconUrl>http://www.nrk.no/drfront/gfx/nrk-logo-white-72x26.png</iconUrl>
+    <releaseNotes>
+      Norwegian nb-NO added.
+    </releaseNotes>
+  </metadata>
+</package>

@@ -1,0 +1,84 @@
+# configuration for "master" branch
+# build in Release mode and deploy to Azure
+-
+  branches:
+    only:
+      - master
+  configuration: Release
+  version: 0.1.{build}
+  assembly_info:
+    patch: true
+    file: '**\AssemblyInfo.*'
+    assembly_version: '{version}'
+    assembly_file_version: '{version}'
+    assembly_informational_version: '{version}'
+
+  install:
+    - cmd: nuget restore source\Contrib.sln
+  before_build:
+    - ps: .\updatenuspecversion.ps1
+  build:
+    project: source\Contrib.sln
+    publish_nuget: true
+    verbosity: minimal
+  test:
+    assemblies:
+      - '**\*tests.dll'
+  deploy:
+    provider: NuGet
+    api_key:
+      secure: di77CstF0jvvy/vMgIrYsvrL8ErTWxKbAImcUDdUERD/Zosdta7uM07XuW19vweY
+    artifact: /.*\.nupkg/
+
+# configuration for all branches starting from "dev-"
+# build in Debug mode and deploy locally for testing
+-
+  branches:
+    only:
+      - dev
+
+  configuration: Debug
+  version: 0.2.{build}-pre
+  assembly_info:
+    patch: true
+    file: '**\AssemblyInfo.*'
+    assembly_version: '{version}'
+    assembly_file_version: '{version}'
+    assembly_informational_version: '{version}'
+
+  install:
+    - cmd: nuget restore source\Contrib.sln
+  before_build:
+    - ps: .\updatenuspecversion.ps1
+  build:
+    project: source\Contrib.sln
+    publish_nuget: true
+    verbosity: minimal
+  test:
+    assemblies:
+      - '**\*tests.dll'
+
+# "fall back" configuration for all other branches
+# no "branches" section defined
+# do not deploy at all
+-
+  configuration: Debug
+  version: 0.001.{build}-unspecified
+  assembly_info:
+    patch: true
+    file: '**\AssemblyInfo.*'
+    assembly_version: '{version}'
+    assembly_file_version: '{version}'
+    assembly_informational_version: '{version}'
+
+  install:
+    - cmd: nuget restore source\Contrib.sln
+  before_build:
+    - ps: .\updatenuspecversion.ps1
+  build:
+    project: source\Contrib.sln
+    publish_nuget: false
+    verbosity: minimal
+  test:
+    assemblies:
+      - '**\*tests.dll'
