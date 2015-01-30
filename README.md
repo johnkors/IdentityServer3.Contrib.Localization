@@ -24,7 +24,7 @@ To use IdentityServer3s default provided localization:
 
 ## Supported languages
  * English (the default provided by the DefaultLocalizationService)
- * nb-No
+ * nb-NO (Norwegian Bokmål)
 
 ## Install
 
