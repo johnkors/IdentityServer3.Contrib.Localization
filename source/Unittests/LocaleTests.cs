@@ -17,6 +17,16 @@ namespace Unittests
             AssertTranslationExists(culture, _possibleScopeIds, "Scopes");
         }
 
+        [Theory]
+        [InlineData("")] // <-- This means using IdentityServers DefaultLocalizationService
+        public void ShouldGetIdServersLocalizedMessages(string culture)
+        {
+            AssertTranslationExists(culture, _possibleMessageIds, "Messages");
+            AssertTranslationExists(culture, _possibleEventIds, "Events");
+            AssertTranslationExists(culture, _possibleScopeIds, "Scopes");
+        }
+
+
         private static void AssertTranslationExists(string culture, IEnumerable<string> ids, string category)
         {
             var options = new LocaleOptions
@@ -30,7 +40,7 @@ namespace Unittests
                 var localizedString = service.GetString(category, scopeId);
                 if (string.IsNullOrEmpty(localizedString))
                 {
-                    var errormsg = string.Format("Could not find translation of {0} in {1}", scopeId, culture ?? "stringempty culture");
+                    var errormsg = string.Format("Could not find translation of Id '{0}' in {1}", scopeId, string.IsNullOrEmpty(culture) ? "IdentityServers internals" : culture);
                     throw new AssertActualExpectedException("Some translation", "NOTHING!", errormsg);
                 }
                 Assert.NotEqual("", localizedString.Trim());
