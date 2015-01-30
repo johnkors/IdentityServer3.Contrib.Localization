@@ -13,12 +13,12 @@ Implementation of IdentityServerV3s ILocalizationService
 Specific culture:
 ```
    var options = new LocaleOptions { Locale = "nb-NO" };
-   var eventService = new GlobalizedLocalizationService(options);
+   var localizationService = new GlobalizedLocalizationService(options);
 ```
 
 To use IdentityServer3s default provided localization:
 ```
-   var eventService = new GlobalizedLocalizationService();
+   var localizationService = new GlobalizedLocalizationService();
 ```
 
 
