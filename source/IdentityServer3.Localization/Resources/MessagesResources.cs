@@ -13,7 +13,7 @@ namespace Thinktecture.IdentityServer.Core.Services.Contrib.Resources
             {
                 if (_resourceManager == null)
                 {
-                    _resourceManager = new ResourceManager("Thinktecture.IdentityServer.Core.Services.Contrib.Resources.Messages", typeof(MessagesResources).Assembly);
+                    _resourceManager = new ResourceManager("Thinktecture.IdentityServer.Core.Services.Contrib.Resources.Messages.Messages", typeof(MessagesResources).Assembly);
                 }
                 return _resourceManager;
 

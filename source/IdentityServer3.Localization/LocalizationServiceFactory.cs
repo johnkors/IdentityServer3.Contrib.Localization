@@ -13,19 +13,19 @@ namespace Thinktecture.IdentityServer.Core.Services.Contrib
         private static readonly IDictionary<string, Func<CultureInfo,ILocalizationService>> AvailableLocalizationServices = new Dictionary<string, Func<CultureInfo,ILocalizationService>>
         {
             { Default, lang => new DefaultLocalizationService() },
-            { "LocalizationBased", lang => new OneLocalizationToRuleThemAllService(lang)}
+            { "nb-NO", lang => new ResourceFileLocalizationService(lang)}
         };
 
         public static ILocalizationService Create(LocaleOptions options = null)
         {
             var internalOpts = options ?? new LocaleOptions();
             var choice = string.IsNullOrEmpty(internalOpts.Locale) ? Default : internalOpts.Locale;
-            var culture = new CultureInfo(options.Locale);
+            var culture = new CultureInfo(internalOpts.Locale);
             Func<CultureInfo, ILocalizationService> serviceBuilder;
             var isAvailable = AvailableLocalizationServices.TryGetValue(choice, out serviceBuilder);
             if (!isAvailable)
             {
-                throw new ApplicationException(string.Format("Localization '{0}' unavailable. Create a Pull Request on GitHub!"));
+                throw new ApplicationException(string.Format("Localization '{0}' unavailable. Create a Pull Request on GitHub!", options.Locale));
             }
           
             return serviceBuilder(culture);

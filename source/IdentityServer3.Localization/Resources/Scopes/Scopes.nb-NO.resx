@@ -117,58 +117,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ClientIdRequired" xml:space="preserve">
-    <value>ClientId er påkrevd</value>
+  <data name="Address_DisplayName" xml:space="preserve">
+    <value>Adresse</value>
   </data>
-  <data name="ExternalProviderError" xml:space="preserve">
-    <value>Ekstern innlogging feilet</value>
+  <data name="All_claims_DisplayName" xml:space="preserve">
+    <value>Alle egenskaper</value>
   </data>
-  <data name="InvalidUsernameOrPassword" xml:space="preserve">
-    <value>Ugyldig brukerernavn eller passord</value>
+  <data name="Email_DisplayName" xml:space="preserve">
+    <value>E-post</value>
   </data>
-  <data name="Invalid_scope" xml:space="preserve">
-    <value>Ugyldig scope</value>
+  <data name="Offline_access_DisplayName" xml:space="preserve">
+    <value>Offline tilgang</value>
   </data>
-  <data name="MissingClientId" xml:space="preserve">
-    <value>ClientId mangler</value>
+  <data name="Openid_DisplayName" xml:space="preserve">
+    <value>Brukerid</value>
   </data>
-  <data name="MissingToken" xml:space="preserve">
-    <value>Token mangler</value>
+  <data name="Phone_DisplayName" xml:space="preserve">
+    <value>Telefon</value>
   </data>
-  <data name="MustSelectAtLeastOnePermission" xml:space="preserve">
-    <value>Velg minst en tilgang</value>
+  <data name="Profile_Description" xml:space="preserve">
+    <value>Profilbeskrivelse</value>
   </data>
-  <data name="NoExternalProvider" xml:space="preserve">
-    <value>Ingen eksterne tjenester</value>
+  <data name="Profile_DisplayName" xml:space="preserve">
+    <value>Profil</value>
   </data>
-  <data name="NoMatchingExternalAccount" xml:space="preserve">
-    <value>Fant ingen tilhørende ekstern konto</value>
-  </data>
-  <data name="NoSignInCookie" xml:space="preserve">
-    <value>Fant ingen SignInCookie</value>
-  </data>
-  <data name="NoSubjectFromExternalProvider" xml:space="preserve">
-    <value>Fikk ikke id fra ekstern tjeneste</value>
-  </data>
-  <data name="PasswordRequired" xml:space="preserve">
-    <value>Passord er påkrevd</value>
-  </data>
-  <data name="SslRequired" xml:space="preserve">
-    <value>SSL er påkrevd</value>
-  </data>
-  <data name="Unauthorized_client" xml:space="preserve">
-    <value>Ikke autorisert klient</value>
-  </data>
-  <data name="UnexpectedError" xml:space="preserve">
-    <value>Uventet feil</value>
-  </data>
-  <data name="UnsupportedMediaType" xml:space="preserve">
-    <value>Angitt MediaType er ikke støttet</value>
-  </data>
-  <data name="Unsupported_response_type" xml:space="preserve">
-    <value>Angitt response_type er ikke støttet</value>
-  </data>
-  <data name="UsernameRequired" xml:space="preserve">
-    <value>Brukernavn er påkrevd</value>
+  <data name="Roles_DisplayName" xml:space="preserve">
+    <value>Roller</value>
   </data>
 </root>

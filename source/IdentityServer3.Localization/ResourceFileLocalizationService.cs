@@ -3,11 +3,11 @@ using Thinktecture.IdentityServer.Core.Services.Contrib.Resources;
 
 namespace Thinktecture.IdentityServer.Core.Services.Contrib
 {
-    public class OneLocalizationToRuleThemAllService : ILocalizationService
+    internal class ResourceFileLocalizationService : ILocalizationService
     {
         private readonly CultureInfo _info;
 
-        public OneLocalizationToRuleThemAllService(CultureInfo info)
+        public ResourceFileLocalizationService(CultureInfo info)
         {
             _info = info;
         }
