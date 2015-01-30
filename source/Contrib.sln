@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer3.Localization", "IdentityServer3.Localization\IdentityServer3.Localization.csproj", "{44908B5F-BBAD-40FE-A1C2-11E3B1C2A36D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unittests", "Unittests\Unittests.csproj", "{869EB8FD-B242-4832-A083-98EF8FE0E3C0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{44908B5F-BBAD-40FE-A1C2-11E3B1C2A36D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44908B5F-BBAD-40FE-A1C2-11E3B1C2A36D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{44908B5F-BBAD-40FE-A1C2-11E3B1C2A36D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{869EB8FD-B242-4832-A083-98EF8FE0E3C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{869EB8FD-B242-4832-A083-98EF8FE0E3C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{869EB8FD-B242-4832-A083-98EF8FE0E3C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{869EB8FD-B242-4832-A083-98EF8FE0E3C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

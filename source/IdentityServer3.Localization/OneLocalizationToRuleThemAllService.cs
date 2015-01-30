@@ -3,7 +3,7 @@ using Thinktecture.IdentityServer.Core.Services.Contrib.Resources;
 
 namespace Thinktecture.IdentityServer.Core.Services.Contrib
 {
-    internal class OneLocalizationToRuleThemAllService : ILocalizationService
+    public class OneLocalizationToRuleThemAllService : ILocalizationService
     {
         private readonly CultureInfo _info;
 
