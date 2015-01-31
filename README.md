@@ -10,10 +10,21 @@ Implementation of IdentityServerV3s ILocalizationService
 
 ## Usage
 
+Specific culture:
 ```
    var options = new LocaleOptions { Locale = "nb-NO" };
-   var eventService = new GlobalizedLocalizationService(options);
+   var localizationService = new GlobalizedLocalizationService(options);
 ```
+
+To use IdentityServer3s default provided localization:
+```
+   var localizationService = new GlobalizedLocalizationService();
+```
+
+
+## Supported languages
+ * English (the default provided by the DefaultLocalizationService)
+ * nb-NO (Norwegian Bokmål)
 
 ## Install
 

@@ -12,4 +12,8 @@
       Norwegian nb-NO added.
     </releaseNotes>
   </metadata>
+  <files>
+    <file src="bin\Release\**\*resources.dll"
+          target="lib/net45"/>
+  </files>
 </package>
