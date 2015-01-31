@@ -5,7 +5,7 @@
     only:
       - master
   configuration: Release
-  version: 0.1.{build}
+  version: 0.2.{build}
   assembly_info:
     patch: true
     file: '**\AssemblyInfo.*'
@@ -37,8 +37,8 @@
     only:
       - dev
 
-  configuration: Debug
-  version: 0.2.{build}-pre
+  configuration: Release
+  version: 0.3.{build}-pre
   assembly_info:
     patch: true
     file: '**\AssemblyInfo.*'
@@ -62,7 +62,7 @@
 # no "branches" section defined
 # do not deploy at all
 -
-  configuration: Debug
+  configuration: Release
   version: 0.001.{build}-unspecified
   assembly_info:
     patch: true
