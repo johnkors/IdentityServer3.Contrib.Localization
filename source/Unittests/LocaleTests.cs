@@ -17,6 +17,22 @@ namespace Unittests
             AssertTranslationExists(culture, _possibleEventIds, "Events");
             AssertTranslationExists(culture, _possibleScopeIds, "Scopes");
         }
+
+        /// <summary>
+        /// Bug / invariance in idsrv ids sent to ILocalizationService. Handle it here.
+        /// </summary>
+        /// <param name="culture"></param>
+        [Theory]
+        [InlineData("nb-NO")]
+        public void ShouldGetLocalizedMessagesRegardlessOfCasing(string culture)
+        {
+            var messageidsUppercased = _possibleMessageIds.Select(mid => mid.ToUpper());
+            var eventidsUppercased = _possibleEventIds.Select(mid => mid.ToUpper());
+            var scopeidsUppercased = _possibleScopeIds.Select(mid => mid.ToUpper());
+            AssertTranslationExists(culture, messageidsUppercased, "Messages");
+            AssertTranslationExists(culture, eventidsUppercased, "Events");
+            AssertTranslationExists(culture, scopeidsUppercased, "Scopes");
+        }
         
         [Theory(Skip = "Bug in idsrv default localization service. Enable when fixed")]
         [InlineData("")] // <-- This means using IdentityServers DefaultLocalizationService
