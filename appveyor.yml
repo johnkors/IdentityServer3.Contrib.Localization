@@ -5,7 +5,7 @@
     only:
       - master
   configuration: Release
-  version: 0.1.{build}
+  version: 0.2.{build}
   assembly_info:
     patch: true
     file: '**\AssemblyInfo.*'
@@ -38,7 +38,7 @@
       - dev
 
   configuration: Debug
-  version: 0.2.{build}-pre
+  version: 0.3.{build}-pre
   assembly_info:
     patch: true
     file: '**\AssemblyInfo.*'
