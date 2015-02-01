@@ -31,7 +31,8 @@ Pirate culture:
 ## Supported languages
  * English (the default provided by the DefaultLocalizationService)
  * nb-NO (Norwegian Bokmål)
-
+ * pirate (yarr)
+ 
 ## Install
 
 ```
