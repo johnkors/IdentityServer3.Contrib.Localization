@@ -52,6 +52,7 @@
     <Compile Include="GlobalizedLocalizationService.cs" />
     <Compile Include="LocaleOptions.cs" />
     <Compile Include="LocalizationServiceFactory.cs" />
+    <Compile Include="PirateLocalizationService.cs" />
     <Compile Include="ResourceFileLocalizationService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\EventResources.cs" />

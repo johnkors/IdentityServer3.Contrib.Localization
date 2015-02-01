@@ -7,7 +7,7 @@ using Xunit.Sdk;
 
 namespace Unittests
 {
-    public class OneLocalizationToRuleThemAllServiceTests
+    public class Translate
     {
         [Theory]
         [InlineData("nb-NO")]
@@ -16,6 +16,14 @@ namespace Unittests
             AssertTranslationExists(culture, _possibleMessageIds, "Messages");
             AssertTranslationExists(culture, _possibleEventIds, "Events");
             AssertTranslationExists(culture, _possibleScopeIds, "Scopes");
+        }
+
+        [Fact]
+        public void ShouldGetGrogfilledMessages()
+        {
+            AssertTranslationExists("pirate", _possibleMessageIds, "Messages");
+            AssertTranslationExists("pirate", _possibleEventIds, "Events");
+            AssertTranslationExists("pirate", _possibleScopeIds, "Scopes");
         }
 
         /// <summary>
@@ -74,6 +82,11 @@ namespace Unittests
                 throw new AssertActualExpectedException("Some translation", "NOTHING!", concated );
             }
         }
+
+        private readonly IEnumerable<string> _piratedIds = new List<string>
+        {
+            MessageIds.ClientIdRequired
+        };
 
         private readonly IEnumerable<string> _possibleMessageIds = new List<string>
         {
