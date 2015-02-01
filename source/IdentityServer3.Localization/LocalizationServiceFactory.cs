@@ -11,7 +11,8 @@ namespace Thinktecture.IdentityServer.Core.Services.Contrib
         {
             { Constants.Default, lang => new DefaultLocalizationService() },
             { "nb-NO", lang => new ResourceFileLocalizationService(lang)},
-            { Constants.Pirate, lang => new PirateLocalizationService()}
+            { Constants.Pirate, lang => new PirateLocalizationService()},
+            { "tr-TR", lang => new ResourceFileLocalizationService(lang)}
         };
 
         public static ILocalizationService Create(LocaleOptions options = null)
