@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
-using Thinktecture.IdentityServer.Core.Resources;
 using Thinktecture.IdentityServer.Core.Services.Default;
 
 namespace Thinktecture.IdentityServer.Core.Services.Contrib
@@ -18,6 +17,11 @@ namespace Thinktecture.IdentityServer.Core.Services.Contrib
         {
             var internalOpts = options ?? new LocaleOptions();
             var choice = string.IsNullOrEmpty(internalOpts.Locale) ? Constants.Default : internalOpts.Locale;
+            if (choice == "pirate")
+            {
+                return new PirateLocalizationService();
+            }
+
             var culture = new CultureInfo(internalOpts.Locale);
             Func<CultureInfo, ILocalizationService> serviceBuilder;
             var isAvailable = AvailableLocalizationServices.TryGetValue(choice, out serviceBuilder);

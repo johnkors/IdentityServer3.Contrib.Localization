@@ -37,7 +37,7 @@
     only:
       - dev
 
-  configuration: Debug
+  configuration: Release
   version: 0.3.{build}-pre
   assembly_info:
     patch: true
@@ -62,7 +62,7 @@
 # no "branches" section defined
 # do not deploy at all
 -
-  configuration: Debug
+  configuration: Release
   version: 0.001.{build}-unspecified
   assembly_info:
     patch: true
