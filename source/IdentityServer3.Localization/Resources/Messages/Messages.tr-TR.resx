@@ -117,58 +117,58 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ClientIdRequired" xml:space="preserve">
+  <data name="clientidrequired" xml:space="preserve">
     <value>Kullanıcı kimliği gereklidir</value>
   </data>
-  <data name="ExternalProviderError" xml:space="preserve">
+  <data name="externalprovidererror" xml:space="preserve">
     <value>Harici kimlik doğrulayıcıya oturum açılırken bir hata oluştu. Hata mesajı: {0}</value>
   </data>
-  <data name="InvalidUsernameOrPassword" xml:space="preserve">
+  <data name="invalidusernameorpassword" xml:space="preserve">
     <value>Geçersiz kullanıcı adı ve parola</value>
   </data>
-  <data name="Invalid_scope" xml:space="preserve">
+  <data name="invalid_scope" xml:space="preserve">
     <value>İstemci uygulama yetkisi olmayan bir kaynağa erişmeye çalıştı.</value>
   </data>
-  <data name="MissingClientId" xml:space="preserve">
+  <data name="missingclientid" xml:space="preserve">
     <value>client_id eksik</value>
   </data>
-  <data name="MissingToken" xml:space="preserve">
+  <data name="missingtoken" xml:space="preserve">
     <value>Token eksik</value>
   </data>
-  <data name="MustSelectAtLeastOnePermission" xml:space="preserve">
+  <data name="mustselectatleastonepermission" xml:space="preserve">
     <value>En az bir izin seçmelisiniz</value>
   </data>
-  <data name="NoExternalProvider" xml:space="preserve">
+  <data name="noexternalprovider" xml:space="preserve">
     <value>Harici kimlik doğrulayıcı belirtilmedi.</value>
   </data>
-  <data name="NoMatchingExternalAccount" xml:space="preserve">
+  <data name="nomatchingexternalaccount" xml:space="preserve">
     <value>Geçersiz Hesap</value>
   </data>
-  <data name="NoSignInCookie" xml:space="preserve">
+  <data name="nosignincookie" xml:space="preserve">
     <value>Hangi uygulamaya oturum açacağınız belirlenirken hata oluştu. Uygulamaya geri dönerek tekrar deneyin.</value>
   </data>
-  <data name="NoSubjectFromExternalProvider" xml:space="preserve">
+  <data name="nosubjectfromexternalprovider" xml:space="preserve">
     <value>Harici kimlik doğrulayıcı ile kimlik doğrulanırken hata oluştu</value>
   </data>
-  <data name="PasswordRequired" xml:space="preserve">
+  <data name="passwordrequired" xml:space="preserve">
     <value>Parola gereklidir</value>
   </data>
-  <data name="SslRequired" xml:space="preserve">
+  <data name="sslrequired" xml:space="preserve">
     <value>SSL gereklidir</value>
   </data>
-  <data name="Unauthorized_client" xml:space="preserve">
+  <data name="unauthorized_client" xml:space="preserve">
     <value>İstemci uygulaması bilinmiyor veya yetkili değil.</value>
   </data>
-  <data name="UnexpectedError" xml:space="preserve">
+  <data name="unexpectederror" xml:space="preserve">
     <value>Beklenmeyen bir hata oluştu</value>
   </data>
-  <data name="UnsupportedMediaType" xml:space="preserve">
+  <data name="unsupportedmediaType" xml:space="preserve">
     <value>Desteklenmeyen Medya Türü</value>
   </data>
-  <data name="Unsupported_response_type" xml:space="preserve">
+  <data name="unsupported_response_type" xml:space="preserve">
     <value>Yetkilendirme sunucusu istenen yanıt türünü desteklemiyor.</value>
   </data>
-  <data name="UsernameRequired" xml:space="preserve">
+  <data name="usernamerequired" xml:space="preserve">
     <value>Kullanıcı adı gereklidir</value>
   </data>
 </root>
