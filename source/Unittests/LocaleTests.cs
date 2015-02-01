@@ -51,6 +51,14 @@ namespace Unittests
             AssertTranslationExists(culture, _possibleScopeIds, "Scopes");
         }
 
+        [Fact(Skip = "Bug in idsrv default localization service.Enable when fixed")]
+        public void ShouldUseDefaultLocalizationServiceForNull()
+        {
+            AssertTranslationExists(null, _possibleMessageIds, "Messages");
+            AssertTranslationExists(null, _possibleEventIds, "Events");
+            AssertTranslationExists(null, _possibleScopeIds, "Scopes");
+        }
+
 
         private static void AssertTranslationExists(string culture, IEnumerable<string> ids, string category)
         {
