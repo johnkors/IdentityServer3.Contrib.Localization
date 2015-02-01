@@ -19,6 +19,15 @@ namespace Unittests
             AssertTranslationExists(culture, _possibleScopeIds, "Scopes");
         }
 
+        [Theory]
+        [InlineData("tr-TR")]
+        public void ShouldGetLocalizedMessages_TR(string culture)
+        {
+            AssertTranslationExists(culture, _possibleMessageIds, "Messages");
+            AssertTranslationExists(culture, _possibleEventIds, "Events");
+            AssertTranslationExists(culture, _possibleScopeIds, "Scopes");
+        }
+
         [Fact]
         public void ShouldGetGrogfilledMessages()
         {
