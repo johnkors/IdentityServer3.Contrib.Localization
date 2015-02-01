@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Thinktecture.IdentityServer.Core.Resources;
 using Thinktecture.IdentityServer.Core.Services.Contrib;
@@ -57,6 +58,16 @@ namespace Unittests
             AssertTranslationExists(null, _possibleMessageIds, "Messages");
             AssertTranslationExists(null, _possibleEventIds, "Events");
             AssertTranslationExists(null, _possibleScopeIds, "Scopes");
+        }
+
+        [Fact]
+        public void ShouldThrowExceptionForNotFoundLocale()
+        {
+            var options = new LocaleOptions
+            {
+                Locale = "notexisting"
+            };
+            Assert.Throws<ApplicationException>(() => new GlobalizedLocalizationService(options));
         }
 
 

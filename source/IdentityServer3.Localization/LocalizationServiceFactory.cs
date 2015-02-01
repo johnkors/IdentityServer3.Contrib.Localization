@@ -11,7 +11,7 @@ namespace Thinktecture.IdentityServer.Core.Services.Contrib
         {
             { Constants.Default, lang => new DefaultLocalizationService() },
             { "nb-NO", lang => new ResourceFileLocalizationService(lang)},
-            { "pirate", lang => new PirateLocalizationService()}
+            { Constants.Pirate, lang => new PirateLocalizationService()}
         };
 
         public static ILocalizationService Create(LocaleOptions options = null)
@@ -27,14 +27,14 @@ namespace Thinktecture.IdentityServer.Core.Services.Contrib
                 return AvailableLocalizationServices[Constants.Default](null);
             }
 
-            var culture = new CultureInfo(internalOpts.Locale);
-            Func<CultureInfo, ILocalizationService> serviceBuilder;
-            var isAvailable = AvailableLocalizationServices.TryGetValue(internalOpts.Locale, out serviceBuilder);
-            if (!isAvailable)
+            if (!AvailableLocalizationServices.ContainsKey(internalOpts.Locale))
             {
                 throw new ApplicationException(string.Format("Localization '{0}' unavailable. Create a Pull Request on GitHub!", options.Locale));
             }
-          
+            
+            var serviceBuilder = AvailableLocalizationServices[internalOpts.Locale];
+
+            var culture = new CultureInfo(internalOpts.Locale);
             return serviceBuilder(culture);
         }
     }
