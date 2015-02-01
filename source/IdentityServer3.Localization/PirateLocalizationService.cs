@@ -2,7 +2,7 @@
 
 namespace Thinktecture.IdentityServer.Core.Services.Contrib
 {
-    public class PirateLocalizationService : ILocalizationService
+    internal class PirateLocalizationService : ILocalizationService
     {
         public string GetString(string category, string id)
         {

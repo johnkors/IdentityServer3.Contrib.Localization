@@ -5,7 +5,7 @@ using Thinktecture.IdentityServer.Core.Services.Default;
 
 namespace Thinktecture.IdentityServer.Core.Services.Contrib
 {
-    public static class LocalizationServiceFactory
+    internal static class LocalizationServiceFactory
     {
         public static readonly IDictionary<string, Func<CultureInfo,ILocalizationService>> AvailableLocalizationServices = new Dictionary<string, Func<CultureInfo,ILocalizationService>>
         {

@@ -1,4 +1,6 @@
-﻿namespace Thinktecture.IdentityServer.Core.Services.Contrib
+﻿using System.Collections.Generic;
+
+namespace Thinktecture.IdentityServer.Core.Services.Contrib
 {
     public class GlobalizedLocalizationService : ILocalizationService
     {
@@ -12,6 +14,11 @@
         public string GetString(string category, string id)
         {
             return _service.GetString(category, id);
+        }
+
+        public IEnumerable<string> GetAvailableLocales()
+        {
+            return LocalizationServiceFactory.AvailableLocalizationServices.Keys;
         }
     }
 }

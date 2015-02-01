@@ -11,6 +11,7 @@ namespace Unittests
     public class Translate
     {
         [Theory]
+        [InlineData("pirate")]
         [InlineData("nb-NO")]
         [InlineData("tr-TR")]
         public void ShouldGetLocalizedMessages(string culture)
@@ -20,19 +21,12 @@ namespace Unittests
             AssertTranslationExists(culture, _possibleScopeIds, "Scopes");
         }
 
-        [Fact]
-        public void ShouldGetGrogfilledMessages()
-        {
-            AssertTranslationExists("pirate", _possibleMessageIds, "Messages");
-            AssertTranslationExists("pirate", _possibleEventIds, "Events");
-            AssertTranslationExists("pirate", _possibleScopeIds, "Scopes");
-        }
-
         /// <summary>
         /// Bug / invariance in idsrv ids sent to ILocalizationService. Handle it here.
         /// </summary>
         /// <param name="culture"></param>
         [Theory]
+        [InlineData("pirate")]
         [InlineData("nb-NO")]
         [InlineData("tr-TR")]
         public void ShouldGetLocalizedMessagesRegardlessOfCasing(string culture)
@@ -47,6 +41,7 @@ namespace Unittests
         
         [Theory(Skip = "Bug in idsrv default localization service. Enable when fixed")]
         [InlineData("")] // <-- This means using IdentityServers DefaultLocalizationService
+        [InlineData("Default")] // <-- This means using IdentityServers DefaultLocalizationService
         public void ShouldGetIdServersLocalizedMessages(string culture)
         {
             AssertTranslationExists(culture, _possibleMessageIds, "Messages");
@@ -72,6 +67,25 @@ namespace Unittests
             Assert.Throws<ApplicationException>(() => new GlobalizedLocalizationService(options));
         }
 
+        [Theory]
+        [InlineData("Default")]
+        [InlineData("pirate")]
+        [InlineData("nb-NO")]
+        [InlineData("tr-TR")]
+        public void AvailableLocalesContainsTranslations(string locale)
+        {
+            var localeService = new GlobalizedLocalizationService();
+            var availableLocales = localeService.GetAvailableLocales();
+            Assert.Contains(availableLocales, s => s.Equals(locale));
+        }
+
+        [Fact]
+        public void ShouldHaveCorrectCount()
+        {
+            var localeService = new GlobalizedLocalizationService();
+            var availableLocales = localeService.GetAvailableLocales();
+            Assert.Equal(4, availableLocales.Count());
+        }
 
         private static void AssertTranslationExists(string culture, IEnumerable<string> ids, string category)
         {
@@ -103,11 +117,6 @@ namespace Unittests
                 throw new AssertActualExpectedException("Some translation", "NOTHING!", concated );
             }
         }
-
-        private readonly IEnumerable<string> _piratedIds = new List<string>
-        {
-            MessageIds.ClientIdRequired
-        };
 
         private readonly IEnumerable<string> _possibleMessageIds = new List<string>
         {
