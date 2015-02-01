@@ -84,16 +84,19 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Events.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Events\Events.tr-TR.resx" />
     <EmbeddedResource Include="Resources\Messages\Messages.nb-NO.resx" />
     <EmbeddedResource Include="Resources\Messages\Messages.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Messages.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Messages\Messages.tr-TR.resx" />
     <EmbeddedResource Include="Resources\Scopes\Scopes.nb-NO.resx" />
     <EmbeddedResource Include="Resources\Scopes\Scopes.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Scopes.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Scopes\Scopes.tr-TR.resx" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
