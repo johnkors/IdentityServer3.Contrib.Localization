@@ -12,6 +12,7 @@ namespace Unittests
     {
         [Theory]
         [InlineData("nb-NO")]
+        [InlineData("tr-TR")]
         public void ShouldGetLocalizedMessages(string culture)
         {
             AssertTranslationExists(culture, _possibleMessageIds, "Messages");
@@ -33,6 +34,7 @@ namespace Unittests
         /// <param name="culture"></param>
         [Theory]
         [InlineData("nb-NO")]
+        [InlineData("tr-TR")]
         public void ShouldGetLocalizedMessagesRegardlessOfCasing(string culture)
         {
             var messageidsUppercased = _possibleMessageIds.Select(mid => mid.ToUpper());
