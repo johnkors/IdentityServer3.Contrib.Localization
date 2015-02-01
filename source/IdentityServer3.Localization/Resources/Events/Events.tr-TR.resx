@@ -117,31 +117,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ExternalLoginFailure" xml:space="preserve">
+  <data name="externalloginfailure" xml:space="preserve">
     <value>Harici Oturum Başarısız</value>
   </data>
-  <data name="ExternalLoginSuccess" xml:space="preserve">
+  <data name="externalloginsuccess" xml:space="preserve">
     <value>Harici Oturum Başarılı</value>
   </data>
-  <data name="LocalLoginFailure" xml:space="preserve">
+  <data name="localloginfailure" xml:space="preserve">
     <value>Dahili Oturum Başarısız</value>
   </data>
-  <data name="LocalLoginSuccess" xml:space="preserve">
+  <data name="localloginsuccess" xml:space="preserve">
     <value>Dahili Oturum Başarılı</value>
   </data>
-  <data name="LogoutEvent" xml:space="preserve">
+  <data name="logoutevent" xml:space="preserve">
     <value>Oturum Kapatma Eylemi</value>
   </data>
-  <data name="PartialLogin" xml:space="preserve">
+  <data name="partiallogin" xml:space="preserve">
     <value>Kısmi Oturum</value>
   </data>
-  <data name="PartialLoginComplete" xml:space="preserve">
+  <data name="partiallogincomplete" xml:space="preserve">
     <value>Kısmi Oturum Tamamlandı</value>
   </data>
-  <data name="PreLoginFailure" xml:space="preserve">
+  <data name="preloginfailure" xml:space="preserve">
     <value>Oturum Öncesi Hatası</value>
   </data>
-  <data name="PreLoginSuccess" xml:space="preserve">
+  <data name="preloginsuccess" xml:space="preserve">
     <value>Oturum Öncesi Başarılı</value>
   </data>
 </root>
