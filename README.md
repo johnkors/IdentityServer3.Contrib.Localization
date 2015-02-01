@@ -21,6 +21,12 @@ To use IdentityServer3s default provided localization:
    var localizationService = new GlobalizedLocalizationService();
 ```
 
+Pirate culture:
+```
+   var options = new LocaleOptions { Locale = "pirate" }; // ye be warned!
+   var localizationService = new GlobalizedLocalizationService(options);
+```
+
 
 ## Supported languages
  * English (the default provided by the DefaultLocalizationService)
