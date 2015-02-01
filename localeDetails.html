@@ -1,0 +1,17 @@
+<ul>
+  <li ng-repeat="trans in translations">
+    <a href="#/{{trans.locale}}"> {{trans.locale}}</a>
+  </li>
+</ul>
+<ul>
+  <li ng-repeat="trans in localeDetails.translations">
+    <span>{{trans.id}}</span>
+    :
+    <span ng-show="trans.value" style="color:green" >
+           {{trans.value}}
+    </span>
+    <span ng-show="!trans.value" style="color:red">
+           MISSING TRANSLATION
+    </span>
+  </li>
+</ul>
