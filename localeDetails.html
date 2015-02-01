@@ -1,8 +1,10 @@
-<ul>
+<ul id="details">
   <li ng-repeat="trans in translations">
     <a href="#/{{trans.locale}}"> {{trans.locale}}</a>
   </li>
 </ul>
+
+<h3>{{localeDetails.locale}}</h3>
 <ul>
   <li ng-repeat="trans in localeDetails.translations">
     <span>{{trans.id}}</span>
