@@ -162,7 +162,7 @@
   <data name="unexpectederror" xml:space="preserve">
     <value>Beklenmeyen bir hata oluştu</value>
   </data>
-  <data name="unsupportedmediaType" xml:space="preserve">
+  <data name="unsupportedmediatype" xml:space="preserve">
     <value>Desteklenmeyen Medya Türü</value>
   </data>
   <data name="unsupported_response_type" xml:space="preserve">
