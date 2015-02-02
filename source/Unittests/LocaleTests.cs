@@ -5,6 +5,7 @@ using Thinktecture.IdentityServer.Core.Resources;
 using Thinktecture.IdentityServer.Core.Services.Contrib;
 using Xunit;
 using Xunit.Sdk;
+using IdSrvConstants = Thinktecture.IdentityServer.Core.Constants;
 
 namespace Unittests
 {
@@ -16,9 +17,9 @@ namespace Unittests
         [InlineData("tr-TR")]
         public void ShouldGetLocalizedMessages(string culture)
         {
-            AssertTranslationExists(culture, _possibleMessageIds, "Messages");
-            AssertTranslationExists(culture, _possibleEventIds, "Events");
-            AssertTranslationExists(culture, _possibleScopeIds, "Scopes");
+            AssertTranslationExists(culture, TestHelper.GetAllMessageIds(), IdSrvConstants.LocalizationCategories.Messages);
+            AssertTranslationExists(culture, TestHelper.GetAllEventIds(), IdSrvConstants.LocalizationCategories.Events);
+            AssertTranslationExists(culture, TestHelper.GetAllScopeIds(), IdSrvConstants.LocalizationCategories.Scopes);
         }
 
         /// <summary>
@@ -31,12 +32,12 @@ namespace Unittests
         [InlineData("tr-TR")]
         public void ShouldGetLocalizedMessagesRegardlessOfCasing(string culture)
         {
-            var messageidsUppercased = _possibleMessageIds.Select(mid => mid.ToUpper());
-            var eventidsUppercased = _possibleEventIds.Select(mid => mid.ToUpper());
-            var scopeidsUppercased = _possibleScopeIds.Select(mid => mid.ToUpper());
-            AssertTranslationExists(culture, messageidsUppercased, "Messages");
-            AssertTranslationExists(culture, eventidsUppercased, "Events");
-            AssertTranslationExists(culture, scopeidsUppercased, "Scopes");
+            var messageidsUppercased = TestHelper.GetAllMessageIds().Select(mid => mid.ToUpper());
+            var eventidsUppercased = TestHelper.GetAllEventIds().Select(mid => mid.ToUpper());
+            var scopeidsUppercased = TestHelper.GetAllScopeIds().Select(mid => mid.ToUpper());
+            AssertTranslationExists(culture, messageidsUppercased, IdSrvConstants.LocalizationCategories.Messages);
+            AssertTranslationExists(culture, eventidsUppercased, IdSrvConstants.LocalizationCategories.Events);
+            AssertTranslationExists(culture, scopeidsUppercased, IdSrvConstants.LocalizationCategories.Scopes);
         }
         
         [Theory(Skip = "Bug in idsrv default localization service. Enable when fixed")]
@@ -44,17 +45,17 @@ namespace Unittests
         [InlineData("Default")] // <-- This means using IdentityServers DefaultLocalizationService
         public void ShouldGetIdServersLocalizedMessages(string culture)
         {
-            AssertTranslationExists(culture, _possibleMessageIds, "Messages");
-            AssertTranslationExists(culture, _possibleEventIds, "Events");
-            AssertTranslationExists(culture, _possibleScopeIds, "Scopes");
+            AssertTranslationExists(culture, TestHelper.GetAllMessageIds(), IdSrvConstants.LocalizationCategories.Messages);
+            AssertTranslationExists(culture, TestHelper.GetAllEventIds(), IdSrvConstants.LocalizationCategories.Events);
+            AssertTranslationExists(culture, TestHelper.GetAllScopeIds(), IdSrvConstants.LocalizationCategories.Scopes);
         }
 
         [Fact(Skip = "Bug in idsrv default localization service.Enable when fixed")]
         public void ShouldUseDefaultLocalizationServiceForNull()
         {
-            AssertTranslationExists(null, _possibleMessageIds, "Messages");
-            AssertTranslationExists(null, _possibleEventIds, "Events");
-            AssertTranslationExists(null, _possibleScopeIds, "Scopes");
+            AssertTranslationExists(null, TestHelper.GetAllMessageIds(), IdSrvConstants.LocalizationCategories.Messages);
+            AssertTranslationExists(null, TestHelper.GetAllEventIds(), IdSrvConstants.LocalizationCategories.Events);
+            AssertTranslationExists(null, TestHelper.GetAllScopeIds(), IdSrvConstants.LocalizationCategories.Scopes);
         }
 
         [Fact]
@@ -117,55 +118,23 @@ namespace Unittests
                 throw new AssertActualExpectedException("Some translation", "NOTHING!", concated );
             }
         }
+    }
 
-        private readonly IEnumerable<string> _possibleMessageIds = new List<string>
+    internal static class TestHelper
+    {
+        public static IEnumerable<string> GetAllMessageIds()
         {
-            MessageIds.ClientIdRequired,
-            MessageIds.ExternalProviderError,
-            MessageIds.InvalidUsernameOrPassword,
-            MessageIds.Invalid_scope,
-            MessageIds.MissingClientId,
-            MessageIds.MissingToken,
-            MessageIds.MustSelectAtLeastOnePermission,
-            MessageIds.NoExternalProvider,
-            MessageIds.NoMatchingExternalAccount,
-            MessageIds.NoSignInCookie,
-            MessageIds.NoSubjectFromExternalProvider,
-            MessageIds.PasswordRequired,
-            MessageIds.SslRequired,
-            MessageIds.Unauthorized_client,
-            MessageIds.UnexpectedError,
-            MessageIds.UnsupportedMediaType,
-            MessageIds.Unsupported_response_type,
-            MessageIds.UsernameRequired
-        };
+            return typeof(MessageIds).GetFields().Select( m => m.GetRawConstantValue().ToString());            
+        }
 
-        private readonly IEnumerable<string> _possibleEventIds = new List<string>
+        public static IEnumerable<string> GetAllEventIds()
         {
-            EventIds.ExternalLoginFailure,
-            EventIds.ExternalLoginSuccess,
-            EventIds.LocalLoginFailure,
-            EventIds.LocalLoginSuccess,
-            EventIds.LogoutEvent,
-            EventIds.PartialLogin,
-            EventIds.PartialLoginComplete,
-            EventIds.PreLoginFailure,
-            EventIds.PreLoginSuccess
-        };
+            return typeof(EventIds).GetFields().Select(m => m.GetRawConstantValue().ToString());
+        }
 
-
-        private readonly IEnumerable<string> _possibleScopeIds = new List<string>
+        public static IEnumerable<string> GetAllScopeIds()
         {
-            ScopeIds.Address_DisplayName,
-            ScopeIds.All_claims_DisplayName,
-            ScopeIds.Email_DisplayName,
-            ScopeIds.Offline_access_DisplayName,
-            ScopeIds.Openid_DisplayName,
-            ScopeIds.Phone_DisplayName,
-            ScopeIds.Profile_Description,
-            ScopeIds.Profile_DisplayName,
-            ScopeIds.Roles_DisplayName
-        };
-
+            return typeof(ScopeIds).GetFields().Select(m => m.GetRawConstantValue().ToString());
+        }
     }
 }
