@@ -49,12 +49,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
-    <Compile Include="FallbackDecorator.cs" />
+    <Compile Include="Internals\FallbackDecorator.cs" />
     <Compile Include="GlobalizedLocalizationService.cs" />
     <Compile Include="LocaleOptions.cs" />
-    <Compile Include="LocalizationServiceFactory.cs" />
-    <Compile Include="PirateLocalizationService.cs" />
-    <Compile Include="ResourceFileLocalizationService.cs" />
+    <Compile Include="Internals\LocalizationServiceFactory.cs" />
+    <Compile Include="Internals\PirateLocalizationService.cs" />
+    <Compile Include="Internals\ResourceFileLocalizationService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\EventResources.cs" />
     <Compile Include="Resources\Events\Events.Designer.cs">

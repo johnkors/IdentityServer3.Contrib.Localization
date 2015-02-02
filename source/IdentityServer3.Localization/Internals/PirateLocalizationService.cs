@@ -1,6 +1,6 @@
 ﻿using Thinktecture.IdentityServer.Core.Resources;
 
-namespace Thinktecture.IdentityServer.Core.Services.Contrib
+namespace Thinktecture.IdentityServer.Core.Services.Contrib.Internals
 {
     internal class PirateLocalizationService : ILocalizationService
     {

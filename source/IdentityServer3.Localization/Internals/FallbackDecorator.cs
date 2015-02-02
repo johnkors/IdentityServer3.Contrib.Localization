@@ -1,6 +1,6 @@
 ﻿using Thinktecture.IdentityServer.Core.Services.Default;
 
-namespace Thinktecture.IdentityServer.Core.Services.Contrib
+namespace Thinktecture.IdentityServer.Core.Services.Contrib.Internals
 {
     internal class FallbackDecorator : ILocalizationService
     {
@@ -13,18 +13,12 @@ namespace Thinktecture.IdentityServer.Core.Services.Contrib
             _fallBackService = fallBackService ?? new DefaultLocalizationService();
         }
 
-        public ILocalizationService FallBackService
-        {
-            get { return _fallBackService; }
-        }
-
-
         public string GetString(string category, string id)
         {
             var innerString = _inner.GetString(category, id);
-            if (string.IsNullOrEmpty(innerString) && FallBackService != null)
+            if (string.IsNullOrEmpty(innerString) && _fallBackService != null)
             {
-                return FallBackService.GetString(category, id);
+                return _fallBackService.GetString(category, id);
             }
             return innerString;
         }

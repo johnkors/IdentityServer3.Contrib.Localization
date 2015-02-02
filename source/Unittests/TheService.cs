@@ -79,12 +79,12 @@ namespace Unittests
             };
             var service = new GlobalizedLocalizationService(options);
             var notFoundTranslations = new List<string>();
-            foreach (var scopeId in ids)
+            foreach (var id in ids)
             {
-                var localizedString = service.GetString(category, scopeId);
+                var localizedString = service.GetString(category, id);
                 if (string.IsNullOrEmpty(localizedString))
                 {
-                    var errormsg = string.Format("Could not find translation of Id '{0}' in {1}", scopeId,
+                    var errormsg = string.Format("Could not find translation of Id '{0}' in {1}", id,
                         string.IsNullOrEmpty(culture) ? "IdentityServers internals" : culture);
                     notFoundTranslations.Add(errormsg);
 
