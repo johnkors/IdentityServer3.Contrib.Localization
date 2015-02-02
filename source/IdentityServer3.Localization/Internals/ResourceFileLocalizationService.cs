@@ -1,7 +1,7 @@
 ﻿using System.Globalization;
 using Thinktecture.IdentityServer.Core.Services.Contrib.Resources;
 
-namespace Thinktecture.IdentityServer.Core.Services.Contrib
+namespace Thinktecture.IdentityServer.Core.Services.Contrib.Internals
 {
     internal class ResourceFileLocalizationService : ILocalizationService
     {

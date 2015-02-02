@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using Thinktecture.IdentityServer.Core.Services.Contrib.Internals;
 
 namespace Thinktecture.IdentityServer.Core.Services.Contrib
 {
@@ -8,7 +11,17 @@ namespace Thinktecture.IdentityServer.Core.Services.Contrib
 
         public GlobalizedLocalizationService(LocaleOptions options = null)
         {
-            _service = LocalizationServiceFactory.Create(options);
+            var internalOpts = options ?? new LocaleOptions();
+            Validate(internalOpts);
+            _service = LocalizationServiceFactory.Create(internalOpts);
+        }
+
+        private void Validate(LocaleOptions options)
+        {
+            if (options.Locale == null || options.Locale.Trim() == string.Empty || !GetAvailableLocales().Contains(options.Locale))
+            {
+                throw new ApplicationException(string.Format("Localization '{0}' unavailable. Create a Pull Request on GitHub!", options.Locale));
+            }
         }
 
         public string GetString(string category, string id)
@@ -16,7 +29,7 @@ namespace Thinktecture.IdentityServer.Core.Services.Contrib
             return _service.GetString(category, id);
         }
 
-        public IEnumerable<string> GetAvailableLocales()
+        public static IEnumerable<string> GetAvailableLocales()
         {
             return LocalizationServiceFactory.AvailableLocalizationServices.Keys;
         }

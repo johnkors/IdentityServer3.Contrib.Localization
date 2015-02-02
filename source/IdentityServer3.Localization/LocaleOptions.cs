@@ -9,6 +9,7 @@ namespace Thinktecture.IdentityServer.Core.Services.Contrib
         /// "nb-NO"
         /// </list>
         public string Locale { get; set; }
+        public ILocalizationService FallbackLocalizationService { get; set; }
 
         public LocaleOptions()
         {
