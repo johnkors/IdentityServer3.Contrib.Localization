@@ -7,36 +7,32 @@ namespace Thinktecture.IdentityServer.Core.Services.Contrib
 {
     internal static class LocalizationServiceFactory
     {
-        public static readonly IDictionary<string, Func<CultureInfo,ILocalizationService>> AvailableLocalizationServices = new Dictionary<string, Func<CultureInfo,ILocalizationService>>
+        public static readonly IDictionary<string, ILocalizationService> AvailableLocalizationServices;
+
+        static LocalizationServiceFactory()
         {
-            { Constants.Default, lang => new DefaultLocalizationService() },
-            { "nb-NO", lang => new ResourceFileLocalizationService(lang)},
-            { Constants.Pirate, lang => new PirateLocalizationService()},
-            { "tr-TR", lang => new ResourceFileLocalizationService(lang)}
-        };
-
-        public static ILocalizationService Create(LocaleOptions options = null)
-        {
-            var internalOpts = options == null || string.IsNullOrEmpty(options.Locale) ? new LocaleOptions() : options;
-            if (internalOpts.Locale == Constants.Pirate)
+            AvailableLocalizationServices = new Dictionary<string, ILocalizationService>
             {
-                return AvailableLocalizationServices[Constants.Pirate](null);
-            }
-
-            if (internalOpts.Locale == Constants.Default)
-            {
-                return AvailableLocalizationServices[Constants.Default](null);
-            }
-
-            if (!AvailableLocalizationServices.ContainsKey(internalOpts.Locale))
-            {
-                throw new ApplicationException(string.Format("Localization '{0}' unavailable. Create a Pull Request on GitHub!", options.Locale));
-            }
-            
-            var serviceBuilder = AvailableLocalizationServices[internalOpts.Locale];
-
-            var culture = new CultureInfo(internalOpts.Locale);
-            return serviceBuilder(culture);
+                {Constants.Default, new DefaultLocalizationService()},
+                {Constants.Pirate, new PirateLocalizationService()}
+            };
+            AvailableLocalizationServices.Add(CreateResourceBased(Constants.nbNO));
+            AvailableLocalizationServices.Add(CreateResourceBased(Constants.trTR));
         }
+
+        public static ILocalizationService Create(LocaleOptions options)
+        {
+            var inner = AvailableLocalizationServices[options.Locale];
+            if (options.FallbackLocalizationService != null)
+            {
+                return new FallbackDecorator(inner, options.FallbackLocalizationService);
+            }
+            return new FallbackDecorator(inner, AvailableLocalizationServices[Constants.Default]);
+        }
+
+        private static KeyValuePair<string, ILocalizationService> CreateResourceBased(string locale)
+        {
+            return new KeyValuePair<string, ILocalizationService>(locale, new ResourceFileLocalizationService(new CultureInfo(locale)));
+        } 
     }
 }

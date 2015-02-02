@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
+    <Compile Include="FallbackDecorator.cs" />
     <Compile Include="GlobalizedLocalizationService.cs" />
     <Compile Include="LocaleOptions.cs" />
     <Compile Include="LocalizationServiceFactory.cs" />

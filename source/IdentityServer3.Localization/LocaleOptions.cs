@@ -1,3 +1,5 @@
+using Thinktecture.IdentityServer.Core.Services.Default;
+
 namespace Thinktecture.IdentityServer.Core.Services.Contrib
 {
     public class LocaleOptions
@@ -9,6 +11,7 @@ namespace Thinktecture.IdentityServer.Core.Services.Contrib
         /// "nb-NO"
         /// </list>
         public string Locale { get; set; }
+        public ILocalizationService FallbackLocalizationService { get; set; }
 
         public LocaleOptions()
         {
