@@ -30,10 +30,10 @@ Pirate culture:
 
 ## Supported languages
  * English (the default provided by the DefaultLocalizationService)
- * nb-NO (Norwegian Bokmål)
- * tr-TR (Turkish), [Iltera](https://github.com/iltera) sayesinde
- * de-DE (German), danke Schön [ManuelRauber](https://github.com/ManuelRauber)
- * pirate (yarr), yarr repo owner
+ * [nb-NO (Norwegian Bokmål)](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/nb-NO)
+ * [tr-TR (Turkish)](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/tr-TR), [Iltera](https://github.com/iltera) sayesinde
+ * [de-DE (German)](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/de-DE), danke Schön [ManuelRauber](https://github.com/ManuelRauber)
+ * [pirate (yarr)](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/pirate), yarr repo owner
  
 ## Install
 
