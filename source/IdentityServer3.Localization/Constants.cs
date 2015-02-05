@@ -6,5 +6,6 @@ namespace Thinktecture.IdentityServer.Core.Services.Contrib
         public const string Pirate = "pirate";
         public const string nbNO = "nb-NO";
         public const string trTR = "tr-TR";
+        public const string deDE = "de-DE";
     }
 }

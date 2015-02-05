@@ -80,18 +80,21 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Resources\Events\Events.de-DE.resx" />
     <EmbeddedResource Include="Resources\Events\Events.nb-NO.resx" />
     <EmbeddedResource Include="Resources\Events\Events.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Events.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Events\Events.tr-TR.resx" />
+    <EmbeddedResource Include="Resources\Messages\Messages.de-DE.resx" />
     <EmbeddedResource Include="Resources\Messages\Messages.nb-NO.resx" />
     <EmbeddedResource Include="Resources\Messages\Messages.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Messages.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Messages\Messages.tr-TR.resx" />
+    <EmbeddedResource Include="Resources\Scopes\Scopes.de-DE.resx" />
     <EmbeddedResource Include="Resources\Scopes\Scopes.nb-NO.resx" />
     <EmbeddedResource Include="Resources\Scopes\Scopes.resx">
       <Generator>ResXFileCodeGenerator</Generator>
