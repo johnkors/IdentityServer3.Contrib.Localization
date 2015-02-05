@@ -94,6 +94,24 @@ dev:<a href="https://ci.appveyor.com/project/JohnKorsnes/identityserver3-contrib
 <p>NuGet:
 <a href="https://www.nuget.org/packages/IdentityServer3.Localization">https://www.nuget.org/packages/IdentityServer3.Localization</a></p>
 
+<h2>Contributing</h2>
+
+How to add another language:
+
+<ul>
+  <li>Fork the repo</li>
+  <li>Add the following resource files for your language in the resource folder (for instance by copying the default). ISO codes can be found <a href="https://msdn.microsoft.com/en-us/library/ee796272(v=cs.20).aspx">here</a>
+      <ol>
+        <li> Events.ISO-code-for-your-translation.resx </li>
+        <li> Messages.ISO-code-for-your-translation.resx </li>
+        <li> Scopes.ISO-code-for-your-translation.resx </li>
+      </ol>
+  <li> Run the tests and fix any errors so they are green!</li>
+  <li> Rebase off upstream if behind, and submit the Pull Request</li>
+</ul>
+
+
+
 <h2>
 <a id="dependencies" class="anchor" href="#dependencies" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dependencies</h2>
 
