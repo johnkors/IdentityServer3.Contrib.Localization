@@ -1,8 +1,17 @@
-console.log('This would be the main JS file.');
+if (window.location.protocol == "https:"){
+  window.location.href = "http:" + window.location.href.substring(window.location.protocol.length);
+}
+
 
 var nameApp = angular.module('TestApp', ['ngRoute']);
 
-nameApp.config(function($routeProvider) {
+
+
+nameApp.config(function($routeProvider, $window) {
+
+
+
+
   $routeProvider.
     when('/', {
       templateUrl: 'locales.html',
