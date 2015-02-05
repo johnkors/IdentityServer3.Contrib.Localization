@@ -154,7 +154,7 @@
     <value>Pre-inloggning Lyckades</value>
   </data>
   <data name="ResourceOwnerFlowLoginFailure" xml:space="preserve">
-    <value>Resource Owner Password Flow Inloggnign Misslyckades</value>
+    <value>Resource Owner Password Flow Inloggning Misslyckades</value>
   </data>
   <data name="ResourceOwnerFlowLoginSuccess" xml:space="preserve">
     <value>Resource Owner Password Flow Inloggning Lyckades</value>
