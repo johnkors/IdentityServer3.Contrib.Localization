@@ -7,11 +7,7 @@ var nameApp = angular.module('TestApp', ['ngRoute']);
 
 
 
-nameApp.config(function($routeProvider, $window) {
-
-
-
-
+nameApp.config(function($routeProvider) {
   $routeProvider.
     when('/', {
       templateUrl: 'locales.html',
