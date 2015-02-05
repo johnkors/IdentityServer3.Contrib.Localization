@@ -31,8 +31,9 @@ Pirate culture:
 ## Supported languages
  * English (the default provided by the DefaultLocalizationService)
  * nb-NO (Norwegian Bokmål)
- * tr-TR (Turkish)
- * pirate (yarr)
+ * tr-TR (Turkish), [Iltera](https://github.com/iltera) sayesinde
+ * de-DE (German), danke Schön [ManuelRauber](https://github.com/ManuelRauber)
+ * pirate (yarr), yarr repo owner
  
 ## Install
 
@@ -42,6 +43,23 @@ Pirate culture:
 
 NuGet:
 https://www.nuget.org/packages/IdentityServer3.Localization
+
+
+## Contributing 
+
+How to add another language:
+
+ * Fork the repo
+ * Add the following resource files for your language in the resource folder (for instance by copying the default). ISO codes can be found [here])https://msdn.microsoft.com/en-us/library/ee796272(v=cs.20).aspx)
+      
+  1. Events.ISO-code-for-your-translation.resx 
+  2. Messages.ISO-code-for-your-translation.resx 
+   3. Scopes.ISO-code-for-your-translation.resx 
+      
+ * Run the tests and fix any errors so they are green!
+ * Rebase off upstream if behind, and submit the Pull Request
+
+
 
 
 ## Dependencies
