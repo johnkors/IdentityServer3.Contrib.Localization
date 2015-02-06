@@ -117,6 +117,15 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ClientPermissionsRevoked" xml:space="preserve">
+    <value>Client Permissions inndratt</value>
+  </data>
+  <data name="CspReport" xml:space="preserve">
+    <value>CSP-rapport</value>
+  </data>
+  <data name="ExternalLoginError" xml:space="preserve">
+    <value>Feil under innlogging mot ekstern tjeneste</value>
+  </data>
   <data name="ExternalLoginFailure" xml:space="preserve">
     <value>Kunne ikke logge inn mot ekstern tjeneste</value>
   </data>
@@ -135,7 +144,7 @@
   <data name="PartialLogin" xml:space="preserve">
     <value>Delvis innlogging</value>
   </data>
-  <data name="PartialLogincomplete" xml:space="preserve">
+  <data name="PartialLoginComplete" xml:space="preserve">
     <value>Delvis innlogging fullført</value>
   </data>
   <data name="PreLoginFailure" xml:space="preserve">
@@ -143,5 +152,11 @@
   </data>
   <data name="PreLoginSuccess" xml:space="preserve">
     <value>Vellykket PreLogin</value>
+  </data>
+  <data name="ResourceOwnerFlowLoginFailure" xml:space="preserve">
+    <value>Resource Owner Password Flow innlogging feilet</value>
+  </data>
+  <data name="ResourceOwnerFlowLoginSuccess" xml:space="preserve">
+    <value>Resource Owner Password Flow innlogging ok</value>
   </data>
 </root>

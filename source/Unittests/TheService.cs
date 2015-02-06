@@ -26,8 +26,6 @@ namespace Unittests
         
             foreach (var availableCulture in availableCultures)
             {
-                if (availableCulture == Constants.Default) // Bug in idsrv3 v.1.0.0 with regards to these public ids
-                    continue;
                 AssertTranslationExists(availableCulture, TestHelper.GetAllMessageIds(), IdSrvConstants.Messages);
                 AssertTranslationExists(availableCulture, TestHelper.GetAllEventIds(), IdSrvConstants.Events);
                 AssertTranslationExists(availableCulture, TestHelper.GetAllScopeIds(), IdSrvConstants.Scopes);
@@ -81,7 +79,7 @@ namespace Unittests
                 }
                 else
                 {
-                    string message = string.Format("{0} - {1} - {2}", culture, id, localizedString);
+                    string message = string.Format("{0} - {1}:{2} - {3}", culture, category, id, localizedString);
                     Trace.WriteLine(message);
                     Debug.WriteLine(message);
                     Console.WriteLine(message);

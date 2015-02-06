@@ -144,7 +144,7 @@
   <data name="PartialLogin" xml:space="preserve">
     <value>Partieller Login</value>
   </data>
-  <data name="PartialLogincomplete" xml:space="preserve">
+  <data name="PartialLoginComplete" xml:space="preserve">
     <value>Partieller Login erfolgreich</value>
   </data>
   <data name="PreLoginFailure" xml:space="preserve">

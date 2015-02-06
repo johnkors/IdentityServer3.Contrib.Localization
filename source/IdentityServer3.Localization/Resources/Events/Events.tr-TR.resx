@@ -135,7 +135,7 @@
   <data name="PartialLogin" xml:space="preserve">
     <value>Kısmi Oturum</value>
   </data>
-  <data name="PartialLogincomplete" xml:space="preserve">
+  <data name="PartialLoginComplete" xml:space="preserve">
     <value>Kısmi Oturum Tamamlandı</value>
   </data>
   <data name="PreLoginFailure" xml:space="preserve">
