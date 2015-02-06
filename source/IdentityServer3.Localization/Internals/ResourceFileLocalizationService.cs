@@ -14,15 +14,14 @@ namespace Thinktecture.IdentityServer.Core.Services.Contrib.Internals
 
         public string GetString(string category, string id)
         {
-            var lowercasedid = id.ToLower();
             switch (category)
             {
                 case "Messages":
-                    return MessagesResources.GetResourceManager.GetString(lowercasedid, _info);
+                    return MessagesResources.GetResourceManager.GetString(id, _info);
                 case "Events":
-                    return EventResources.ResourceManager.GetString(lowercasedid, _info);
+                    return EventResources.ResourceManager.GetString(id, _info);
                 case "Scopes":
-                    return ScopeResources.ResourceManager.GetString(lowercasedid, _info);
+                    return ScopeResources.ResourceManager.GetString(id, _info);
                 default:
                     return (string) null;
             }

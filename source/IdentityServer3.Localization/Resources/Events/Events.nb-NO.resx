@@ -117,31 +117,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="externalloginfailure" xml:space="preserve">
+  <data name="ExternalLoginFailure" xml:space="preserve">
     <value>Kunne ikke logge inn mot ekstern tjeneste</value>
   </data>
-  <data name="externalloginsuccess" xml:space="preserve">
+  <data name="ExternalLoginSuccess" xml:space="preserve">
     <value>Vellykket innlogging mot ekstern tjeneste</value>
   </data>
-  <data name="localloginfailure" xml:space="preserve">
+  <data name="LocalLoginFailure" xml:space="preserve">
     <value>Kunne ikke logge inn med lokal innlogging</value>
   </data>
-  <data name="localloginsuccess" xml:space="preserve">
+  <data name="LocalLoginSuccess" xml:space="preserve">
     <value>Vellykket lokal innlogging</value>
   </data>
-  <data name="logoutevent" xml:space="preserve">
+  <data name="LogoutEvent" xml:space="preserve">
     <value>Utlogging</value>
   </data>
-  <data name="partiallogin" xml:space="preserve">
+  <data name="PartialLogin" xml:space="preserve">
     <value>Delvis innlogging</value>
   </data>
-  <data name="partiallogincomplete" xml:space="preserve">
+  <data name="PartialLogincomplete" xml:space="preserve">
     <value>Delvis innlogging fullført</value>
   </data>
-  <data name="preloginfailure" xml:space="preserve">
+  <data name="PreLoginFailure" xml:space="preserve">
     <value>PreLogin feilet</value>
   </data>
-  <data name="preloginsuccess" xml:space="preserve">
+  <data name="PreLoginSuccess" xml:space="preserve">
     <value>Vellykket PreLogin</value>
   </data>
 </root>

@@ -117,46 +117,46 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="clientpermissionsrevoked" xml:space="preserve">
+  <data name="ClientPermissionsRevoked" xml:space="preserve">
     <value>Client-Berechtigung widerrufen</value>
   </data>
-  <data name="cspreport" xml:space="preserve">
+  <data name="CspReport" xml:space="preserve">
     <value>Content Security Policy (CSP) Report</value>
   </data>
-  <data name="externalloginerror" xml:space="preserve">
+  <data name="ExternalLoginError" xml:space="preserve">
     <value>Externer Loginfehler</value>
   </data>
-  <data name="externalloginfailure" xml:space="preserve">
+  <data name="ExternalLoginFailure" xml:space="preserve">
     <value>Externer Loginfehler</value>
   </data>
-  <data name="externalloginsuccess" xml:space="preserve">
+  <data name="ExternalLoginSuccess" xml:space="preserve">
     <value>Externer Login erfolgreich</value>
   </data>
-  <data name="localloginfailure" xml:space="preserve">
+  <data name="LocalLoginFailure" xml:space="preserve">
     <value>Lokaler Loginfehler</value>
   </data>
-  <data name="localloginsuccess" xml:space="preserve">
+  <data name="LocalLoginSuccess" xml:space="preserve">
     <value>Loker Login erfolgreich</value>
   </data>
-  <data name="logoutevent" xml:space="preserve">
+  <data name="LogoutEvent" xml:space="preserve">
     <value>Logout-Event</value>
   </data>
-  <data name="partiallogin" xml:space="preserve">
+  <data name="PartialLogin" xml:space="preserve">
     <value>Partieller Login</value>
   </data>
-  <data name="partiallogincomplete" xml:space="preserve">
+  <data name="PartialLogincomplete" xml:space="preserve">
     <value>Partieller Login erfolgreich</value>
   </data>
-  <data name="preloginfailure" xml:space="preserve">
+  <data name="PreLoginFailure" xml:space="preserve">
     <value>PreLogin-Fehler</value>
   </data>
-  <data name="preloginsuccess" xml:space="preserve">
+  <data name="PreLoginSuccess" xml:space="preserve">
     <value>PreLogin erfolgreich</value>
   </data>
-  <data name="resourceownerflowloginfailure" xml:space="preserve">
+  <data name="ResourceOwnerFlowLoginFailure" xml:space="preserve">
     <value>Resource Owner Password Flow Loginfehler</value>
   </data>
-  <data name="resourceownerflowloginsuccess" xml:space="preserve">
+  <data name="ResourceOwnerFlowLoginSuccess" xml:space="preserve">
     <value>Resource Owner Password Flow Login erfolgreich</value>
   </data>
 </root>
