@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using FakeItEasy;
 using Thinktecture.IdentityServer.Core.Resources;
@@ -13,6 +14,11 @@ namespace Unittests
 {
     public class TheService
     {
+        public TheService()
+        {
+            Debug.Listeners.Add(new DefaultTraceListener());
+        }
+
         [Fact]
         public void HasTranslationsForAllPublicIds()
         {
@@ -75,6 +81,10 @@ namespace Unittests
                 }
                 else
                 {
+                    string message = string.Format("{0} - {1} - {2}", culture, id, localizedString);
+                    Trace.WriteLine(message);
+                    Debug.WriteLine(message);
+                    Console.WriteLine(message);
                     Assert.NotEqual("", localizedString.Trim());    
                 }
                 
