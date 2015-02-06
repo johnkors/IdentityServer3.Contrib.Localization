@@ -117,31 +117,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="address_displayname" xml:space="preserve">
+  <data name="address_DisplayName" xml:space="preserve">
     <value>Adresse</value>
   </data>
-  <data name="all_claims_displayname" xml:space="preserve">
+  <data name="all_claims_DisplayName" xml:space="preserve">
     <value>Alle egenskaper</value>
   </data>
-  <data name="email_displayname" xml:space="preserve">
+  <data name="email_DisplayName" xml:space="preserve">
     <value>E-post</value>
   </data>
-  <data name="offline_access_displayname" xml:space="preserve">
+  <data name="offline_access_DisplayName" xml:space="preserve">
     <value>Offline tilgang</value>
   </data>
-  <data name="openid_displayname" xml:space="preserve">
+  <data name="openid_DisplayName" xml:space="preserve">
     <value>Brukerid</value>
   </data>
-  <data name="phone_displayname" xml:space="preserve">
+  <data name="phone_DisplayName" xml:space="preserve">
     <value>Telefon</value>
   </data>
-  <data name="profile_description" xml:space="preserve">
+  <data name="profile_Description" xml:space="preserve">
     <value>Profilbeskrivelse</value>
   </data>
-  <data name="profile_displayname" xml:space="preserve">
+  <data name="profile_DisplayName" xml:space="preserve">
     <value>Profil</value>
   </data>
-  <data name="roles_displayname" xml:space="preserve">
+  <data name="roles_DisplayName" xml:space="preserve">
     <value>Roller</value>
   </data>
 </root>

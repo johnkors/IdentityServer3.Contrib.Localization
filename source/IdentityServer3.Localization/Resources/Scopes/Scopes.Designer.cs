@@ -59,5 +59,86 @@ namespace Thinktecture.IdentityServer.Core.Services.Contrib.Resources.Scopes {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your postal address.
+        /// </summary>
+        internal static string address_DisplayName {
+            get {
+                return ResourceManager.GetString("address_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to All user information.
+        /// </summary>
+        internal static string all_claims_DisplayName {
+            get {
+                return ResourceManager.GetString("all_claims_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your email address.
+        /// </summary>
+        internal static string email_DisplayName {
+            get {
+                return ResourceManager.GetString("email_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Offline access.
+        /// </summary>
+        internal static string offline_access_DisplayName {
+            get {
+                return ResourceManager.GetString("offline_access_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your user identifier.
+        /// </summary>
+        internal static string openid_DisplayName {
+            get {
+                return ResourceManager.GetString("openid_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your phone number.
+        /// </summary>
+        internal static string phone_DisplayName {
+            get {
+                return ResourceManager.GetString("phone_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your user profile information (first name, last name, etc.).
+        /// </summary>
+        internal static string profile_Description {
+            get {
+                return ResourceManager.GetString("profile_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User profile.
+        /// </summary>
+        internal static string profile_DisplayName {
+            get {
+                return ResourceManager.GetString("profile_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User roles.
+        /// </summary>
+        internal static string roles_DisplayName {
+            get {
+                return ResourceManager.GetString("roles_DisplayName", resourceCulture);
+            }
+        }
     }
 }
