@@ -117,46 +117,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ClientPermissionsRevoked" xml:space="preserve">
-    <value>Client-Berechtigung widerrufen</value>
+  <data name="address_DisplayName" xml:space="preserve">
+    <value>Postadress</value>
   </data>
-  <data name="CspReport" xml:space="preserve">
-    <value>Content Security Policy (CSP) Report</value>
+  <data name="all_claims_DisplayName" xml:space="preserve">
+    <value>All användarinformation</value>
   </data>
-  <data name="ExternalLoginError" xml:space="preserve">
-    <value>Externer Loginfehler</value>
+  <data name="email_DisplayName" xml:space="preserve">
+    <value>E-postadress</value>
   </data>
-  <data name="ExternalLoginFailure" xml:space="preserve">
-    <value>Externer Loginfehler</value>
+  <data name="offline_access_DisplayName" xml:space="preserve">
+    <value>Offline tillgång</value>
   </data>
-  <data name="ExternalLoginSuccess" xml:space="preserve">
-    <value>Externer Login erfolgreich</value>
+  <data name="openid_DisplayName" xml:space="preserve">
+    <value>Användarid</value>
   </data>
-  <data name="LocalLoginFailure" xml:space="preserve">
-    <value>Lokaler Loginfehler</value>
+  <data name="phone_DisplayName" xml:space="preserve">
+    <value>Telefonnummer</value>
   </data>
-  <data name="LocalLoginSuccess" xml:space="preserve">
-    <value>Loker Login erfolgreich</value>
+  <data name="profile_Description" xml:space="preserve">
+    <value>Användarprofil (Förnamn, efternamn, etc.)</value>
   </data>
-  <data name="LogoutEvent" xml:space="preserve">
-    <value>Logout-Event</value>
+  <data name="profile_DisplayName" xml:space="preserve">
+    <value>Användarprofil</value>
   </data>
-  <data name="PartialLogin" xml:space="preserve">
-    <value>Partieller Login</value>
-  </data>
-  <data name="PartialLoginComplete" xml:space="preserve">
-    <value>Partieller Login erfolgreich</value>
-  </data>
-  <data name="PreLoginFailure" xml:space="preserve">
-    <value>PreLogin-Fehler</value>
-  </data>
-  <data name="PreLoginSuccess" xml:space="preserve">
-    <value>PreLogin erfolgreich</value>
-  </data>
-  <data name="ResourceOwnerFlowLoginFailure" xml:space="preserve">
-    <value>Resource Owner Password Flow Loginfehler</value>
-  </data>
-  <data name="ResourceOwnerFlowLoginSuccess" xml:space="preserve">
-    <value>Resource Owner Password Flow Login erfolgreich</value>
+  <data name="roles_DisplayName" xml:space="preserve">
+    <value>Roller</value>
   </data>
 </root>

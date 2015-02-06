@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using FakeItEasy;
 using Thinktecture.IdentityServer.Core.Resources;
@@ -13,35 +14,21 @@ namespace Unittests
 {
     public class TheService
     {
+        public TheService()
+        {
+            Debug.Listeners.Add(new DefaultTraceListener());
+        }
+
         [Fact]
         public void HasTranslationsForAllPublicIds()
         {
-            var availableCultures =  GlobalizedLocalizationService.GetAvailableLocales();
+            var availableCultures = GlobalizedLocalizationService.GetAvailableLocales();
+        
             foreach (var availableCulture in availableCultures)
             {
-                if (availableCulture == Constants.Default) // Bug in idsrv3 v.1.0.0 with regards to these public ids
-                    continue;
                 AssertTranslationExists(availableCulture, TestHelper.GetAllMessageIds(), IdSrvConstants.Messages);
                 AssertTranslationExists(availableCulture, TestHelper.GetAllEventIds(), IdSrvConstants.Events);
                 AssertTranslationExists(availableCulture, TestHelper.GetAllScopeIds(), IdSrvConstants.Scopes);
-            }
-        }
-   
-        [Fact]
-        public void HasTranslationsForIdsOnUppercaseFormat()
-        {
-            var messageidsUppercased = TestHelper.GetAllMessageIds().Select(mid => mid.ToUpper()).ToList();
-            var eventidsUppercased = TestHelper.GetAllEventIds().Select(mid => mid.ToUpper()).ToList();
-            var scopeidsUppercased = TestHelper.GetAllScopeIds().Select(mid => mid.ToUpper()).ToList();
-
-            var availableCultures = GlobalizedLocalizationService.GetAvailableLocales();
-            foreach (var availableCulture in availableCultures)
-            {
-                if (availableCulture == Constants.Default) // DefaultLocaleService does not handle invariant casing
-                    continue;
-                AssertTranslationExists(availableCulture, messageidsUppercased, IdSrvConstants.Messages);
-                AssertTranslationExists(availableCulture, eventidsUppercased, IdSrvConstants.Events);
-                AssertTranslationExists(availableCulture, scopeidsUppercased, IdSrvConstants.Scopes);
             }
         }
 
@@ -79,6 +66,7 @@ namespace Unittests
             };
             var service = new GlobalizedLocalizationService(options);
             var notFoundTranslations = new List<string>();
+            
             foreach (var id in ids)
             {
                 var localizedString = service.GetString(category, id);
@@ -91,6 +79,10 @@ namespace Unittests
                 }
                 else
                 {
+                    string message = string.Format("{0} - {1}:{2} - {3}", culture, category, id, localizedString);
+                    Trace.WriteLine(message);
+                    Debug.WriteLine(message);
+                    Console.WriteLine(message);
                     Assert.NotEqual("", localizedString.Trim());    
                 }
                 

@@ -59,5 +59,131 @@ namespace Thinktecture.IdentityServer.Core.Services.Contrib.Resources.Events {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Client Permissions Revoked.
+        /// </summary>
+        internal static string ClientPermissionsRevoked {
+            get {
+                return ResourceManager.GetString("ClientPermissionsRevoked", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Content Security Policy (CSP) Report.
+        /// </summary>
+        internal static string CspReport {
+            get {
+                return ResourceManager.GetString("CspReport", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to External Login Error.
+        /// </summary>
+        internal static string ExternalLoginError {
+            get {
+                return ResourceManager.GetString("ExternalLoginError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to External Login Failure.
+        /// </summary>
+        internal static string ExternalLoginFailure {
+            get {
+                return ResourceManager.GetString("ExternalLoginFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to External Login Success.
+        /// </summary>
+        internal static string ExternalLoginSuccess {
+            get {
+                return ResourceManager.GetString("ExternalLoginSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Local Login Failure.
+        /// </summary>
+        internal static string LocalLoginFailure {
+            get {
+                return ResourceManager.GetString("LocalLoginFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Local Login Success.
+        /// </summary>
+        internal static string LocalLoginSuccess {
+            get {
+                return ResourceManager.GetString("LocalLoginSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Logout Event.
+        /// </summary>
+        internal static string LogoutEvent {
+            get {
+                return ResourceManager.GetString("LogoutEvent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Partial Login.
+        /// </summary>
+        internal static string PartialLogin {
+            get {
+                return ResourceManager.GetString("PartialLogin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Partial Login Complete.
+        /// </summary>
+        internal static string PartialLoginComplete {
+            get {
+                return ResourceManager.GetString("PartialLoginComplete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pre-Login Failure.
+        /// </summary>
+        internal static string PreLoginFailure {
+            get {
+                return ResourceManager.GetString("PreLoginFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pre-Login Success.
+        /// </summary>
+        internal static string PreLoginSuccess {
+            get {
+                return ResourceManager.GetString("PreLoginSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Resource Owner Password Flow Login Failure.
+        /// </summary>
+        internal static string ResourceOwnerFlowLoginFailure {
+            get {
+                return ResourceManager.GetString("ResourceOwnerFlowLoginFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Resource Owner Password Flow Login Success.
+        /// </summary>
+        internal static string ResourceOwnerFlowLoginSuccess {
+            get {
+                return ResourceManager.GetString("ResourceOwnerFlowLoginSuccess", resourceCulture);
+            }
+        }
     }
 }

@@ -43,8 +43,9 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="Thinktecture.IdentityServer3">
-      <HintPath>..\packages\Thinktecture.IdentityServer3.1.0.0\lib\net45\Thinktecture.IdentityServer3.dll</HintPath>
+    <Reference Include="Thinktecture.IdentityServer3, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Thinktecture.IdentityServer3.1.1.0\lib\net45\Thinktecture.IdentityServer3.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -82,6 +83,7 @@
   <ItemGroup>
     <EmbeddedResource Include="Resources\Events\Events.de-DE.resx" />
     <EmbeddedResource Include="Resources\Events\Events.nb-NO.resx" />
+    <EmbeddedResource Include="Resources\Events\Events.sv-SE.resx" />
     <EmbeddedResource Include="Resources\Events\Events.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Events.Designer.cs</LastGenOutput>
@@ -89,6 +91,7 @@
     <EmbeddedResource Include="Resources\Events\Events.tr-TR.resx" />
     <EmbeddedResource Include="Resources\Messages\Messages.de-DE.resx" />
     <EmbeddedResource Include="Resources\Messages\Messages.nb-NO.resx" />
+    <EmbeddedResource Include="Resources\Messages\Messages.sv-SE.resx" />
     <EmbeddedResource Include="Resources\Messages\Messages.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Messages.Designer.cs</LastGenOutput>
@@ -96,6 +99,7 @@
     <EmbeddedResource Include="Resources\Messages\Messages.tr-TR.resx" />
     <EmbeddedResource Include="Resources\Scopes\Scopes.de-DE.resx" />
     <EmbeddedResource Include="Resources\Scopes\Scopes.nb-NO.resx" />
+    <EmbeddedResource Include="Resources\Scopes\Scopes.sv-SE.resx" />
     <EmbeddedResource Include="Resources\Scopes\Scopes.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Scopes.Designer.cs</LastGenOutput>

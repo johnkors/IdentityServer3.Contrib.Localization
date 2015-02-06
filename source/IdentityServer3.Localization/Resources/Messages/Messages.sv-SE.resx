@@ -117,46 +117,61 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ClientPermissionsRevoked" xml:space="preserve">
-    <value>Client-Berechtigung widerrufen</value>
+  <data name="ClientIdRequired" xml:space="preserve">
+    <value>Klientidentifierare är nödvändig</value>
   </data>
-  <data name="CspReport" xml:space="preserve">
-    <value>Content Security Policy (CSP) Report</value>
+  <data name="InvalidUsernameOrPassword" xml:space="preserve">
+    <value>Ogiltigt användarnamn eller lösenord</value>
   </data>
-  <data name="ExternalLoginError" xml:space="preserve">
-    <value>Externer Loginfehler</value>
+  <data name="invalid_scope" xml:space="preserve">
+    <value>Klientapplikationen försökte tillgå en resurs som den inte hade rättighet till.</value>
   </data>
-  <data name="ExternalLoginFailure" xml:space="preserve">
-    <value>Externer Loginfehler</value>
+  <data name="MissingClientId" xml:space="preserve">
+    <value>client_id saknas</value>
   </data>
-  <data name="ExternalLoginSuccess" xml:space="preserve">
-    <value>Externer Login erfolgreich</value>
+  <data name="MissingToken" xml:space="preserve">
+    <value>Token saknas</value>
   </data>
-  <data name="LocalLoginFailure" xml:space="preserve">
-    <value>Lokaler Loginfehler</value>
+  <data name="MustSelectAtLeastOnePermission" xml:space="preserve">
+    <value>Måste välja minst en rättighet.</value>
   </data>
-  <data name="LocalLoginSuccess" xml:space="preserve">
-    <value>Loker Login erfolgreich</value>
+  <data name="NoMatchingExternalAccount" xml:space="preserve">
+    <value>Ogiltigt konto</value>
   </data>
-  <data name="LogoutEvent" xml:space="preserve">
-    <value>Logout-Event</value>
+  <data name="NoSubjectFromExternalProvider" xml:space="preserve">
+    <value>Fel vid autentisering med extern tjänst.</value>
   </data>
-  <data name="PartialLogin" xml:space="preserve">
-    <value>Partieller Login</value>
+  <data name="PasswordRequired" xml:space="preserve">
+    <value>Lösenord krävs</value>
   </data>
-  <data name="PartialLoginComplete" xml:space="preserve">
-    <value>Partieller Login erfolgreich</value>
+  <data name="SslRequired" xml:space="preserve">
+    <value>SSL krävs</value>
   </data>
-  <data name="PreLoginFailure" xml:space="preserve">
-    <value>PreLogin-Fehler</value>
+  <data name="unauthorized_client" xml:space="preserve">
+    <value>Klientapplikationen är okänd eller icke behörig.</value>
   </data>
-  <data name="PreLoginSuccess" xml:space="preserve">
-    <value>PreLogin erfolgreich</value>
+  <data name="UnexpectedError" xml:space="preserve">
+    <value>Ett oväntat fel inträffade</value>
   </data>
-  <data name="ResourceOwnerFlowLoginFailure" xml:space="preserve">
-    <value>Resource Owner Password Flow Loginfehler</value>
+  <data name="UnsupportedMediaType" xml:space="preserve">
+    <value>Osupporterad Media Typ </value>
   </data>
-  <data name="ResourceOwnerFlowLoginSuccess" xml:space="preserve">
-    <value>Resource Owner Password Flow Login erfolgreich</value>
+  <data name="unsupported_response_type" xml:space="preserve">
+    <value>Befogenhetsservern supporterar inte den begärda responstypen</value>
+  </data>
+  <data name="UsernameRequired" xml:space="preserve">
+    <value>Användarnamn krävs</value>
+  </data>
+  <data name="NoSignInCookie" xml:space="preserve">
+    <value>Ett fel inträffade vid avgörandet vilken applikation inloggningen gällde. Återvänd till applikationen och försök igen. </value>
+  </data>
+  <data name="NoExternalProvider" xml:space="preserve">
+    <value>Den externa inloggningstjänsten saknas.</value>
+  </data>
+  <data name="ExternalProviderError" xml:space="preserve">
+    <value>Ett fel inträffade vid inloggning mot den externa inloggningstjänsten. Felmeddelande: {0}</value>
+  </data>
+  <data name="invalid_request" xml:space="preserve">
+    <value>Klientapplikationen gjorde en felaktig förfrågan</value>
   </data>
 </root>
