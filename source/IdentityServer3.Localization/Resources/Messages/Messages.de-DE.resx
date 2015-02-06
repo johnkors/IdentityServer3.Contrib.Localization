@@ -117,58 +117,58 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="clientidrequired" xml:space="preserve">
+  <data name="ClientIdRequired" xml:space="preserve">
     <value>ClientId wird benötigt</value>
   </data>
-  <data name="invalidusernameorpassword" xml:space="preserve">
+  <data name="InvalidUsernameOrPassword" xml:space="preserve">
     <value>Benutzername oder Passwort falsch</value>
   </data>
   <data name="invalid_scope" xml:space="preserve">
     <value>Die Client-Anwendung versuchte auf eine nicht-berechtigte Ressource zuzugreifen.</value>
   </data>
-  <data name="missingclientid" xml:space="preserve">
+  <data name="MissingClientId" xml:space="preserve">
     <value>client_id fehlt</value>
   </data>
-  <data name="missingtoken" xml:space="preserve">
+  <data name="MissingToken" xml:space="preserve">
     <value>Token fehlt</value>
   </data>
-  <data name="mustselectatleastonepermission" xml:space="preserve">
+  <data name="MustSelectAtLeastOnePermission" xml:space="preserve">
     <value>Mindestens eine Berechtigung muss ausgewählt werden.</value>
   </data>
-  <data name="nomatchingexternalaccount" xml:space="preserve">
+  <data name="NoMatchingExternalAccount" xml:space="preserve">
     <value>Ungültiger Account</value>
   </data>
-  <data name="nosubjectfromexternalprovider" xml:space="preserve">
+  <data name="NoSubjectFromExternalProvider" xml:space="preserve">
     <value>Fehler beim Authentifizieren mit externem Login.</value>
   </data>
-  <data name="passwordrequired" xml:space="preserve">
+  <data name="PasswordRequired" xml:space="preserve">
     <value>Passwort wird benötigt.</value>
   </data>
-  <data name="sslrequired" xml:space="preserve">
+  <data name="SslRequired" xml:space="preserve">
     <value>SSL wird benötigt.</value>
   </data>
   <data name="unauthorized_client" xml:space="preserve">
     <value>Die Client-Anwendung ist nicht bekannt oder nicht berechtigt.</value>
   </data>
-  <data name="unexpectederror" xml:space="preserve">
+  <data name="UnexpectedError" xml:space="preserve">
     <value>Ein unerwarteter Fehler ist aufgetreten.</value>
   </data>
-  <data name="unsupportedmediatype" xml:space="preserve">
+  <data name="UnsupportedMediaType" xml:space="preserve">
     <value>Medientyp wird nicht unterstützt</value>
   </data>
   <data name="unsupported_response_type" xml:space="preserve">
     <value>Der Authorisierungsserver unterstützt nicht den angeforderten Antworttyp.</value>
   </data>
-  <data name="usernamerequired" xml:space="preserve">
+  <data name="UsernameRequired" xml:space="preserve">
     <value>Benutzername wird benötigt</value>
   </data>
-  <data name="nosignincookie" xml:space="preserve">
+  <data name="NoSignInCookie" xml:space="preserve">
     <value>Es konnte nicht ermittelt werden, in welche Anwendung eingeloggt werden soll. Bitte kehren Sie zur Anwendung zurück und versuchen Sie es erneut.</value>
   </data>
-  <data name="noexternalprovider" xml:space="preserve">
+  <data name="NoExternalProvider" xml:space="preserve">
     <value>Ein externer Login wurde nicht bereitgestellt.</value>
   </data>
-  <data name="externalprovidererror" xml:space="preserve">
+  <data name="ExternalProviderError" xml:space="preserve">
     <value>Fehler beim Einloggen bei externem Provider. Fehlermeldung: {0}</value>
   </data>
   <data name="invalid_request" xml:space="preserve">
