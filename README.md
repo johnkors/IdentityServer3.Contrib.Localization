@@ -31,10 +31,11 @@ Pirate culture:
 ## Supported languages
  * [Default/English (the default provided by the DefaultLocalizationService)](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/Default)
  * [nb-NO (Norwegian Bokmål)](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/nb-NO)
- * [tr-TR (Turkish)](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/tr-TR), [Iltera](https://github.com/iltera) sayesinde
- * [de-DE (German)](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/de-DE), danke Schön [ManuelRauber](https://github.com/ManuelRauber)
- * [pirate (yarr)](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/pirate), yarr repo owner
- 
+ * [tr-TR (Turkish)](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/tr-TR), [Iltera](https://github.com/iltera) sayesinde!
+ * [de-DE (German)](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/de-DE), danke Schön [ManuelRauber](https://github.com/ManuelRauber)!
+ * [sv-SE (Swedish)](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/de-DE), tack [krippz](https://github.com/krippz)!
+ * [pirate (yarr)](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/pirate), yarr repo owner!
+
 ## Install
 
 ```
@@ -45,17 +46,17 @@ NuGet:
 https://www.nuget.org/packages/IdentityServer3.Localization
 
 
-## Contributing 
+## Contributing
 
 How to add another language:
 
  * Fork the repo
  * Add the following resource files for your language in the resource folder (for instance by copying the default). ISO codes can be found [here])https://msdn.microsoft.com/en-us/library/ee796272(v=cs.20).aspx)
-      
-  1. Events.ISO-code-for-your-translation.resx 
-  2. Messages.ISO-code-for-your-translation.resx 
-   3. Scopes.ISO-code-for-your-translation.resx 
-      
+
+  1. Events.ISO-code-for-your-translation.resx
+  2. Messages.ISO-code-for-your-translation.resx
+   3. Scopes.ISO-code-for-your-translation.resx
+
  * Run the tests and fix any errors so they are green!
  * Rebase off upstream if behind, and submit the Pull Request
 
