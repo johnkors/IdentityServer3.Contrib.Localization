@@ -22,7 +22,7 @@ namespace Unittests
         [Fact]
         public void HasTranslationsForAllPublicIds()
         {
-            var availableCultures = new List<string> {"nb-NO"}; //GlobalizedLocalizationService.GetAvailableLocales();
+            var availableCultures = GlobalizedLocalizationService.GetAvailableLocales();
         
             foreach (var availableCulture in availableCultures)
             {
