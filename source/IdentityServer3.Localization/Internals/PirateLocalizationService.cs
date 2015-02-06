@@ -1,4 +1,5 @@
-﻿using Thinktecture.IdentityServer.Core.Resources;
+﻿using Thinktecture.IdentityServer.Core.Events;
+using Thinktecture.IdentityServer.Core.Resources;
 
 namespace Thinktecture.IdentityServer.Core.Services.Contrib.Internals
 {
@@ -99,6 +100,10 @@ namespace Thinktecture.IdentityServer.Core.Services.Contrib.Internals
                 {
                     return "Give me yerr name, sailor!";
                 }
+                if (id == MessageIds.Invalid_request.ToLower())
+                {
+                    return "Shiver me timbers, where did that request come from?!";
+                }
 
                 return null;
             }
@@ -189,6 +194,26 @@ namespace Thinktecture.IdentityServer.Core.Services.Contrib.Internals
             if (id == EventIds.PreLoginSuccess.ToLower())
             {
                 return "Brought the grog, ey. Okay. Go on.";
+            }
+            if (id == EventIds.ClientPermissionsRevoked.ToLower())
+            {
+                return "a";
+            }
+            if (id == EventIds.CspReport.ToLower())
+            {
+                return "b";
+            }
+            if (id == EventIds.ResourceOwnerFlowLoginFailure.ToLower())
+            {
+                return "c";
+            }
+            if (id == EventIds.ResourceOwnerFlowLoginSuccess.ToLower())
+            {
+                return "d";
+            }
+            if (id == EventIds.ExternalLoginError.ToLower())
+            {
+                return "b";
             }
             return null;
         }
