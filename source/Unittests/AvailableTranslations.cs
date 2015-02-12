@@ -13,6 +13,7 @@ namespace Unittests
         [InlineData("tr-TR")]
         [InlineData("de-DE")]
         [InlineData("sv-SE")]
+        [InlineData("es-AR")]
         public void ContainsLocales(string locale)
         {
             Assert.Contains(GlobalizedLocalizationService.GetAvailableLocales(), s => s.Equals(locale));
