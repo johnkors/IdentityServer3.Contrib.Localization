@@ -22,7 +22,7 @@ namespace Unittests
         [Fact]
         public void HasCorrectCount()
         {
-            Assert.Equal(6, GlobalizedLocalizationService.GetAvailableLocales().Count());
+            Assert.Equal(7, GlobalizedLocalizationService.GetAvailableLocales().Count());
         }
     }
 }
