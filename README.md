@@ -34,7 +34,7 @@ Pirate culture:
  * [tr-TR (Turkish)](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/tr-TR), [Iltera](https://github.com/iltera) sayesinde!
  * [de-DE (German)](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/de-DE), danke Schön [ManuelRauber](https://github.com/ManuelRauber)!
  * [sv-SE (Swedish)](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/de-DE), tack [krippz](https://github.com/krippz)!
-  * [sv-SE (Swedish)](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/es-AR), ¡Muchas gracias, [krippz](https://github.com/gustavoruscitto)!
+  * [es-AR (Spanish, Argentinean)](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/es-AR), ¡Muchas gracias, [gustavoruscitto](https://github.com/gustavoruscitto)!
  * [pirate (yarr)](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/pirate), yarr repo owner!
 
 ## Install
