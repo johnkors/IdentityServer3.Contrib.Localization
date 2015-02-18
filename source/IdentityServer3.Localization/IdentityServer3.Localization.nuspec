@@ -5,11 +5,11 @@
     <title>Thinktecture IdentityServer3 - Localization</title>
     <version>$version$</version>
     <authors>John Korsnes</authors>
-    <description>Contrib implementation of ILocalizationService in IdentityServerv3 for multiple languages</description>
+    <description>Contrib implementation of ILocalizationService in IdentityServer3 for multiple languages</description>
     <projectUrl>http://github.com/nrkno/IdentityServer3.Contrib.Localization </projectUrl>
     <iconUrl>http://www.nrk.no/drfront/gfx/nrk-logo-white-72x26.png</iconUrl>
     <releaseNotes>
-      Swedish sv-Se added
+      Spanish es-AR added
     </releaseNotes>
   </metadata>
   <files>
