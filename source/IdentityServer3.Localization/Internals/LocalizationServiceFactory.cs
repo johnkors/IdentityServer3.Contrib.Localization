@@ -15,11 +15,12 @@ namespace Thinktecture.IdentityServer.Core.Services.Contrib.Internals
                 {Constants.Default, new DefaultLocalizationService()},
                 {Constants.Pirate, new PirateLocalizationService()}
             };
-            AvailableLocalizationServices.Add(CreateResourceBased(Constants.nbNO));
-            AvailableLocalizationServices.Add(CreateResourceBased(Constants.trTR));
             AvailableLocalizationServices.Add(CreateResourceBased(Constants.deDE));
-            AvailableLocalizationServices.Add(CreateResourceBased(Constants.svSE));
             AvailableLocalizationServices.Add(CreateResourceBased(Constants.esAR));
+            AvailableLocalizationServices.Add(CreateResourceBased(Constants.frFR));
+            AvailableLocalizationServices.Add(CreateResourceBased(Constants.nbNO));
+            AvailableLocalizationServices.Add(CreateResourceBased(Constants.svSE));
+            AvailableLocalizationServices.Add(CreateResourceBased(Constants.trTR));
         }
 
         public static ILocalizationService Create(LocaleOptions options)
