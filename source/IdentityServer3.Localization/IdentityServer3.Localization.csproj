@@ -81,6 +81,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Resources\Events\Events.fr-FR.resx" />
     <EmbeddedResource Include="Resources\Events\Events.de-DE.resx" />
     <EmbeddedResource Include="Resources\Events\Events.nb-NO.resx" />
     <EmbeddedResource Include="Resources\Events\Events.sv-SE.resx" />
@@ -90,6 +91,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Events\Events.tr-TR.resx" />
     <EmbeddedResource Include="Resources\Events\Events.es-AR.resx" />
+    <EmbeddedResource Include="Resources\Messages\Messages.fr-FR.resx" />
     <EmbeddedResource Include="Resources\Messages\Messages.es-AR.resx" />
     <EmbeddedResource Include="Resources\Messages\Messages.de-DE.resx" />
     <EmbeddedResource Include="Resources\Messages\Messages.nb-NO.resx" />
@@ -99,6 +101,7 @@
       <LastGenOutput>Messages.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Messages\Messages.tr-TR.resx" />
+    <EmbeddedResource Include="Resources\Scopes\Scopes.fr-FR.resx" />
     <EmbeddedResource Include="Resources\Scopes\Scopes.es-AR.resx" />
     <EmbeddedResource Include="Resources\Scopes\Scopes.de-DE.resx" />
     <EmbeddedResource Include="Resources\Scopes\Scopes.nb-NO.resx" />

@@ -9,11 +9,12 @@ namespace Unittests
         [Theory]
         [InlineData("Default")]
         [InlineData("pirate")]
-        [InlineData("nb-NO")]
-        [InlineData("tr-TR")]
         [InlineData("de-DE")]
-        [InlineData("sv-SE")]
         [InlineData("es-AR")]
+        [InlineData("fr-FR")]
+        [InlineData("nb-NO")]
+        [InlineData("sv-SE")]
+        [InlineData("tr-TR")]
         public void ContainsLocales(string locale)
         {
             Assert.Contains(GlobalizedLocalizationService.GetAvailableLocales(), s => s.Equals(locale));
@@ -22,7 +23,7 @@ namespace Unittests
         [Fact]
         public void HasCorrectCount()
         {
-            Assert.Equal(7, GlobalizedLocalizationService.GetAvailableLocales().Count());
+            Assert.Equal(8, GlobalizedLocalizationService.GetAvailableLocales().Count());
         }
     }
 }

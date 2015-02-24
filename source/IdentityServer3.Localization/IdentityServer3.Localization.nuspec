@@ -6,10 +6,9 @@
     <version>$version$</version>
     <authors>John Korsnes</authors>
     <description>Contrib implementation of ILocalizationService in IdentityServer3 for multiple languages</description>
-    <projectUrl>http://github.com/nrkno/IdentityServer3.Contrib.Localization </projectUrl>
-    <iconUrl>http://www.nrk.no/drfront/gfx/nrk-logo-white-72x26.png</iconUrl>
+    <projectUrl>http://github.com/johnkors/IdentityServer3.Contrib.Localization </projectUrl>    
     <releaseNotes>
-      Spanish es-AR added
+      French fr-FR added
     </releaseNotes>
   </metadata>
   <files>
