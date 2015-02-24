@@ -139,7 +139,7 @@
     <value>Compte externe inconnu.</value>
   </data>
   <data name="NoSubjectFromExternalProvider" xml:space="preserve">
-    <value>Fehler beim Authentifizieren mit externem Login.</value>
+    <value>Erreur lors de l'authentification auprès du fournisseur d'identité externe.</value>
   </data>
   <data name="PasswordRequired" xml:space="preserve">
     <value>Le mot de passe est obligatoire.</value>
