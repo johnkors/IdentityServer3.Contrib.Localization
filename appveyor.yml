@@ -1,7 +1,7 @@
 # Use specific xunit runner
 install:
- cmd : nuget install xunit.runners -prerelease -excludeversion
- cmd : set xunit20=%APPVEYOR_BUILD_FOLDER%\xunit.runners\tools
+  - cmd : nuget install xunit.runners -prerelease -excludeversion
+  - cmd : set xunit20=%APPVEYOR_BUILD_FOLDER%\xunit.runners\tools
 
 
 # configuration for "master" branch
