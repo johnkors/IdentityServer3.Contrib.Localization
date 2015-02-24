@@ -32,7 +32,7 @@ Pirate culture:
  * [Default/English (the default provided by the DefaultLocalizationService)](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/Default)  
  * [de-DE (German)](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/de-DE), danke Schön [ManuelRauber](https://github.com/ManuelRauber)!
  * [es-AR (Spanish, Argentina)](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/es-AR), ¡Muchas gracias, [gustavoruscitto](https://github.com/gustavoruscitto)!
- * [fr-FR (French)](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/fr-FR), Merci, [gnys](https://github.com/ghys)!
+ * [fr-FR (French)](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/fr-FR), Merci, [ghys](https://github.com/ghys)!
  * [nb-NO (Norwegian Bokmål)](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/nb-NO)
  * [sv-SE (Swedish)](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/de-DE), tack [krippz](https://github.com/krippz)!
  * [tr-TR (Turkish)](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/tr-TR), [Iltera](https://github.com/iltera) sayesinde!
