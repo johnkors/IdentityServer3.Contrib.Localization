@@ -10,5 +10,6 @@ namespace Thinktecture.IdentityServer.Core.Services.Contrib
         public const string nbNO = "nb-NO";
         public const string svSE = "sv-SE";
         public const string trTR = "tr-TR";
+        public const string roRO = "ro-RO";
     }
 }
