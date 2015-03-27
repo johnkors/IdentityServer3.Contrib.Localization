@@ -8,7 +8,7 @@
     <description>Contrib implementation of ILocalizationService in IdentityServer3 for multiple languages</description>
     <projectUrl>http://github.com/johnkors/IdentityServer3.Contrib.Localization </projectUrl>    
     <releaseNotes>
-      French fr-FR added
+      Romanian ro-RO added. Updated IdentityServer package reference.
     </releaseNotes>
   </metadata>
   <files>

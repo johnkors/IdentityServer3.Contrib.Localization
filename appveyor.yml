@@ -15,8 +15,6 @@
 
   install:
     - cmd: nuget restore source\Contrib.sln
-    - cmd : nuget install xunit.runners -prerelease -excludeversion
-    - cmd : set xunit20=%APPVEYOR_BUILD_FOLDER%\xunit.runners\tools    
   before_build:
     - ps: .\updatenuspecversion.ps1
   build:
@@ -50,8 +48,6 @@
 
   install:
     - cmd: nuget restore source\Contrib.sln
-    - cmd : nuget install xunit.runners -prerelease -excludeversion
-    - cmd : set xunit20=%APPVEYOR_BUILD_FOLDER%\xunit.runners\tools    
   before_build:
     - ps: .\updatenuspecversion.ps1
   build:
@@ -77,8 +73,6 @@
 
   install:
     - cmd: nuget restore source\Contrib.sln
-    - cmd : nuget install xunit.runners -prerelease -excludeversion
-    - cmd : set xunit20=%APPVEYOR_BUILD_FOLDER%\xunit.runners\tools
   before_build:
     - ps: .\updatenuspecversion.ps1
   build:
