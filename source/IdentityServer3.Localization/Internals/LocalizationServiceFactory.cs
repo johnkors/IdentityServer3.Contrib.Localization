@@ -22,6 +22,7 @@ namespace Thinktecture.IdentityServer.Core.Services.Contrib.Internals
             AvailableLocalizationServices.Add(CreateResourceBased(Constants.svSE));
             AvailableLocalizationServices.Add(CreateResourceBased(Constants.trTR));
             AvailableLocalizationServices.Add(CreateResourceBased(Constants.roRO));
+            AvailableLocalizationServices.Add(CreateResourceBased(Constants.nlNL));
         }
 
         public static ILocalizationService Create(LocaleOptions options)
