@@ -124,7 +124,7 @@
     <value>无效的用户名或密码</value>
   </data>
   <data name="invalid_scope" xml:space="preserve">
-    <value>客户端应用程序试图访问一个资源不能访问。</value>
+    <value>客户端应用程序试图访问的一个资源不能访问。</value>
   </data>
   <data name="MissingClientId" xml:space="preserve">
     <value>client_id失踪</value>
@@ -139,7 +139,7 @@
     <value>无效帐户</value>
   </data>
   <data name="NoSubjectFromExternalProvider" xml:space="preserve">
-    <value>错误验证与外部供应商</value>
+    <value>使用外部提供器验证的时候出现错误</value>
   </data>
   <data name="PasswordRequired" xml:space="preserve">
     <value>需要密码</value>
@@ -148,7 +148,7 @@
     <value>SSL是必需的</value>
   </data>
   <data name="unauthorized_client" xml:space="preserve">
-    <value>客户端应用程序不知道或没有授权。</value>
+    <value>客户端应用程序未知或没有授权</value>
   </data>
   <data name="UnexpectedError" xml:space="preserve">
     <value>发生意外错误</value>
@@ -157,21 +157,21 @@
     <value>不支持的媒体类型</value>
   </data>
   <data name="unsupported_response_type" xml:space="preserve">
-    <value>授权服务器不支持请求的响应类型。</value>
+    <value>授权服务器不支持请求的响应类型</value>
   </data>
   <data name="UsernameRequired" xml:space="preserve">
     <value>用户名是必需的</value>
   </data>
   <data name="NoSignInCookie" xml:space="preserve">
-    <value>有一个错误的决定，你登录到应用。返回应用程序，再试一次。</value>
+    <value>在确定要登录到那个应用的时候出现错误。返回应用程序，再试一次</value>
   </data>
   <data name="NoExternalProvider" xml:space="preserve">
-    <value>外部登录供应商没有提供。</value>
+    <value>外部登录提供器没有提供。</value>
   </data>
   <data name="ExternalProviderError" xml:space="preserve">
-    <value>错误登录到外部的供应商那里。错误信息是：{ 0 }</value>
+    <value>使用外部提供器登录出现错误。错误信息是：{ 0 }</value>
   </data>
   <data name="invalid_request" xml:space="preserve">
-    <value>客户端应用程序做了一个无效的请求。</value>
+    <value>客户端应用程序做了一个无效的请求</value>
   </data>
 </root>

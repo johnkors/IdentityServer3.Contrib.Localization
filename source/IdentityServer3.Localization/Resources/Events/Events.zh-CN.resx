@@ -154,9 +154,9 @@
     <value>预登录成功</value>
   </data>
   <data name="ResourceOwnerFlowLoginFailure" xml:space="preserve">
-    <value>资源所有者密码流登录失败</value>
+    <value>Resource Owner Password Flow模式登录失败</value>
   </data>
   <data name="ResourceOwnerFlowLoginSuccess" xml:space="preserve">
-    <value>资源所有者密码，登录成功流</value>
+    <value>Resource Owner Password Flow模式登录成功</value>
   </data>
 </root>
