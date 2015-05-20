@@ -81,6 +81,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Resources\Events\Events.pt-BR.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\Events\Events.ru-RU.resx" />
     <EmbeddedResource Include="Resources\Events\Events.zh-CN.resx" />
     <EmbeddedResource Include="Resources\Events\Events.nl-NL.resx" />
@@ -88,7 +91,9 @@
     <EmbeddedResource Include="Resources\Events\Events.de-DE.resx" />
     <EmbeddedResource Include="Resources\Events\Events.da-DK.resx" />
     <EmbeddedResource Include="Resources\Events\Events.nb-NO.resx" />
-    <EmbeddedResource Include="Resources\Events\Events.ro-RO.resx" />
+    <EmbeddedResource Include="Resources\Events\Events.ro-RO.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\Events\Events.sv-SE.resx" />
     <EmbeddedResource Include="Resources\Events\Events.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -96,6 +101,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Events\Events.tr-TR.resx" />
     <EmbeddedResource Include="Resources\Events\Events.es-AR.resx" />
+    <EmbeddedResource Include="Resources\Messages\Messages.pt-BR.resx" />
     <EmbeddedResource Include="Resources\Messages\Messages.ru-Ru.resx" />
     <EmbeddedResource Include="Resources\Messages\Messages.zh-CN.resx" />
     <EmbeddedResource Include="Resources\Messages\Messages.nl-NL.resx" />
@@ -111,6 +117,7 @@
       <LastGenOutput>Messages.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Messages\Messages.tr-TR.resx" />
+    <EmbeddedResource Include="Resources\Scopes\Scopes.pt-BR.resx" />
     <EmbeddedResource Include="Resources\Scopes\Scopes.ru-RU.resx" />
     <EmbeddedResource Include="Resources\Scopes\Scopes.zh-CN.resx" />
     <EmbeddedResource Include="Resources\Scopes\Scopes.nl-NL.resx" />
