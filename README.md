@@ -30,7 +30,7 @@ Pirate culture:
 
 ## Supported languages
  * [Default/English (the default provided by the DefaultLocalizationService)](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/Default)
- * [da-DK (Danish)](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/da-DK), Takk [Dalager](https://github.com/iltera)!  
+ * [da-DK (Danish)](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/da-DK), Takk [Dalager](https://github.com/Dalager)!  
  * [de-DE (German)](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/de-DE), danke Schön [ManuelRauber](https://github.com/ManuelRauber)!
  * [es-AR (Spanish, Argentina)](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/es-AR), ¡Muchas gracias, [gustavoruscitto](https://github.com/gustavoruscitto)!
  * [fr-FR (French)](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/fr-FR), Merci, [ghys](https://github.com/ghys)!
