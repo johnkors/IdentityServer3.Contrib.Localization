@@ -16,5 +16,6 @@ namespace Thinktecture.IdentityServer.Core.Services.Contrib
         public const string daDK = "da-DK";
         public const string ruRU = "ru-RU";
         public const string ptBR = "pt-BR";
+        public const string csCZ = "cs-CZ";
     }
 }
