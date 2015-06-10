@@ -21,6 +21,7 @@ namespace Unittests
         [InlineData("da-DK")]
         [InlineData("ru-RU")]
         [InlineData("pt-BR")]
+        [InlineData("cs-CZ")]
         public void ContainsLocales(string locale)
         {
             Assert.Contains(GlobalizedLocalizationService.GetAvailableLocales(), s => s.Equals(locale));
@@ -29,7 +30,7 @@ namespace Unittests
         [Fact]
         public void HasCorrectCount()
         {
-            Assert.Equal(14, GlobalizedLocalizationService.GetAvailableLocales().Count());
+            Assert.Equal(15, GlobalizedLocalizationService.GetAvailableLocales().Count());
         }
     }
 }
