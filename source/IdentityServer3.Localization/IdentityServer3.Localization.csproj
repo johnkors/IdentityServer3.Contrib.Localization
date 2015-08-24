@@ -81,6 +81,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Resources\Events\Events.pl-PL.resx" />
     <EmbeddedResource Include="Resources\Events\Events.cs-CZ.resx" />
     <EmbeddedResource Include="Resources\Events\Events.pt-BR.resx">
       <SubType>Designer</SubType>
@@ -102,6 +103,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Events\Events.tr-TR.resx" />
     <EmbeddedResource Include="Resources\Events\Events.es-AR.resx" />
+    <EmbeddedResource Include="Resources\Messages\Messages.pl-PL.resx" />
     <EmbeddedResource Include="Resources\Messages\Messages.cs-CZ.resx" />
     <EmbeddedResource Include="Resources\Messages\Messages.pt-BR.resx" />
     <EmbeddedResource Include="Resources\Messages\Messages.ru-Ru.resx" />
@@ -119,6 +121,7 @@
       <LastGenOutput>Messages.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Messages\Messages.tr-TR.resx" />
+    <EmbeddedResource Include="Resources\Scopes\Scopes.pl-PL.resx" />
     <EmbeddedResource Include="Resources\Scopes\Scopes.cs-CZ.resx" />
     <EmbeddedResource Include="Resources\Scopes\Scopes.pt-BR.resx" />
     <EmbeddedResource Include="Resources\Scopes\Scopes.ru-RU.resx" />

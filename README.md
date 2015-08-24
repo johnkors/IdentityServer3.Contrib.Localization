@@ -34,6 +34,7 @@ Pirate culture:
  * [es-AR (Spanish, Argentina)](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/es-AR), ¡Muchas gracias, [gustavoruscitto](https://github.com/gustavoruscitto)!
  * [fr-FR (French)](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/fr-FR), Merci, [ghys](https://github.com/ghys)!
  * [nb-NO (Norwegian Bokmål)](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/nb-NO)
+ * [pl-PL (Polish)](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/pl-PL)
  * [ro-RO (Romanian)](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/ro-RO), vă mulțumesc, [totpero](https://github.com/totpero)!
  * [sv-SE (Swedish)](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/de-DE), tack [krippz](https://github.com/krippz)!
  * [tr-TR (Turkish)](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/tr-TR), [Iltera](https://github.com/iltera) sayesinde!
