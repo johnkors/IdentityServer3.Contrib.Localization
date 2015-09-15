@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using IdentityServer3.Core.Services;
 using Thinktecture.IdentityServer.Core.Services.Contrib.Internals;
 
 namespace Thinktecture.IdentityServer.Core.Services.Contrib

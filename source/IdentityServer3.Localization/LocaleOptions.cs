@@ -1,3 +1,5 @@
+using IdentityServer3.Core.Services;
+
 namespace Thinktecture.IdentityServer.Core.Services.Contrib
 {
     public class LocaleOptions
