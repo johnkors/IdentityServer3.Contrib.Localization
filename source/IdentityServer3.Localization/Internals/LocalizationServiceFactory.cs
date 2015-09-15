@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Globalization;
-using Thinktecture.IdentityServer.Core.Services.Default;
+using IdentityServer3.Core.Services;
+using IdentityServer3.Core.Services.Default;
 
 namespace Thinktecture.IdentityServer.Core.Services.Contrib.Internals
 {

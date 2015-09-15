@@ -1,4 +1,5 @@
 ﻿using System.Globalization;
+using IdentityServer3.Core.Services;
 using Thinktecture.IdentityServer.Core.Services.Contrib.Resources;
 
 namespace Thinktecture.IdentityServer.Core.Services.Contrib.Internals
