@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>IdentityServer3.Localization</id>
-    <title>Thinktecture IdentityServer3 - Localization</title>
+    <title>IdentityServer3 - Localization</title>
     <version>$version$</version>
     <authors>John Korsnes</authors>
     <description>Contrib implementation of ILocalizationService in IdentityServer3 for multiple languages</description>
