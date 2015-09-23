@@ -1,11 +1,11 @@
-﻿using System;
+﻿using FakeItEasy;
+using IdentityServer3.Core.Resources;
+using IdentityServer3.Core.Services;
+using IdentityServer3.Core.Services.Contrib;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using FakeItEasy;
-using IdentityServer3.Core.Resources;
-using IdentityServer3.Core.Services;
-using Thinktecture.IdentityServer.Core.Services.Contrib;
 using Xunit;
 using Xunit.Sdk;
 using IdSrvConstants = IdentityServer3.Core.Constants.LocalizationCategories;

@@ -1,4 +1,4 @@
-namespace Thinktecture.IdentityServer.Core.Services.Contrib
+namespace IdentityServer3.Core.Services.Contrib
 {
     public class Constants
     {

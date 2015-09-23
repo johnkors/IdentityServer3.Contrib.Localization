@@ -1,6 +1,6 @@
 ﻿using System.Resources;
 
-namespace Thinktecture.IdentityServer.Core.Services.Contrib.Resources
+namespace IdentityServer3.Core.Services.Contrib.Resources
 {
     public class ScopeResources
     {
