@@ -1,9 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using IdentityServer3.Core.Services.Default;
+using System.Collections.Generic;
 using System.Globalization;
-using IdentityServer3.Core.Services;
-using IdentityServer3.Core.Services.Default;
 
-namespace Thinktecture.IdentityServer.Core.Services.Contrib.Internals
+namespace IdentityServer3.Core.Services.Contrib.Internals
 {
     internal static class LocalizationServiceFactory
     {

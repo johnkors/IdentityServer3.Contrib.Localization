@@ -1,7 +1,6 @@
 ﻿using IdentityServer3.Core.Resources;
-using IdentityServer3.Core.Services;
 
-namespace Thinktecture.IdentityServer.Core.Services.Contrib.Internals
+namespace IdentityServer3.Core.Services.Contrib.Internals
 {
     internal class PirateLocalizationService : ILocalizationService
     {

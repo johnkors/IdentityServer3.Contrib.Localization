@@ -8,10 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Thinktecture.IdentityServer.Core.Services.Contrib.Resources.Scopes {
-    using System;
-    
-    
+namespace Thinktecture.IdentityServer.Core.Services.Contrib.Resources.Scopes
+{
+
+
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>

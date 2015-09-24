@@ -1,5 +1,5 @@
+using IdentityServer3.Core.Services.Contrib;
 using System.Linq;
-using Thinktecture.IdentityServer.Core.Services.Contrib;
 using Xunit;
 
 namespace Unittests
