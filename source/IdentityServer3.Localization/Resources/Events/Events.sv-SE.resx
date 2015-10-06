@@ -118,13 +118,13 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="ClientPermissionsRevoked" xml:space="preserve">
-    <value>Klient Behörighet Återkallad</value>
+    <value>Klientbehörighet Återkallad</value>
   </data>
   <data name="CspReport" xml:space="preserve">
     <value>Content Security Policy (CSP) Rapport</value>
   </data>
   <data name="ExternalLoginError" xml:space="preserve">
-    <value>Externt Inloggnings Fel</value>
+    <value>Externt Inloggningsfel</value>
   </data>
   <data name="ExternalLoginFailure" xml:space="preserve">
     <value>Fel vid Extern Inloggning</value>
@@ -133,7 +133,7 @@
     <value>Extern Inlogging Lyckades</value>
   </data>
   <data name="LocalLoginFailure" xml:space="preserve">
-    <value>Fel vi Lokal Inloggning</value>
+    <value>Fel vid Lokal Inloggning</value>
   </data>
   <data name="LocalLoginSuccess" xml:space="preserve">
     <value>Lokal Inlogging Lyckades</value>
