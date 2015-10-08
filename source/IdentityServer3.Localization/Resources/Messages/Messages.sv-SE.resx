@@ -157,7 +157,7 @@
     <value>Osupporterad Media Typ </value>
   </data>
   <data name="unsupported_response_type" xml:space="preserve">
-    <value>Befogenhetsservern supporterar inte den begärda responstypen</value>
+    <value>Befogenhetsservern supporterar inte den begärda svarstypen</value>
   </data>
   <data name="UsernameRequired" xml:space="preserve">
     <value>Användarnamn krävs</value>
