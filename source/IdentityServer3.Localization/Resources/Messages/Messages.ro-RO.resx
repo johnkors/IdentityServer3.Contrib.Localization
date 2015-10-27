@@ -163,7 +163,7 @@
     <value>Numele utilizatorului este obligatoriu</value>
   </data>
   <data name="NoSignInCookie" xml:space="preserve">
-    <value>Există o eroare în determinarea aplicației cu care doriți să vă autentificați. Întoarceți-vă la aplicația și încercați din nou.</value>
+    <value>Există o eroare în determinarea aplicației cu care doriți să vă autentificați. Întoarceți-vă la aplicație și încercați din nou.</value>
   </data>
   <data name="NoExternalProvider" xml:space="preserve">
     <value>Furnizorul de conectare extern nu a fost furnizat.</value>
