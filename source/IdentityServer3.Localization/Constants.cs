@@ -17,6 +17,7 @@ namespace IdentityServer3.Core.Services.Contrib
         public const string ruRU = "ru-RU";
         public const string ptBR = "pt-BR";
         public const string csCZ = "cs-CZ";
+        public const string itIT = "it-IT";
         public const string plPL = "pl-PL";
     }
 }
