@@ -118,79 +118,60 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="ClientIdRequired" xml:space="preserve">
-    <value>Je vyžadován identifikátor klienta</value>
-    <comment>Client identifier is required</comment>
+    <value>Je vyžadovaný identifikátor klienta</value>
   </data>
   <data name="InvalidUsernameOrPassword" xml:space="preserve">
-    <value>Neplatné uživatelské jméno či heslo</value>
-    <comment>Invalid username or password</comment>
+    <value>Neplatné používateľské meno a heslo</value>
   </data>
   <data name="invalid_scope" xml:space="preserve">
-    <value>Klientská aplikace se pokusila přistoupit ke zdroji, ke kterému nemá přístup.</value>
-    <comment>The client application tried to access a resource it does not have access to.</comment>
+    <value>Klientska aplikácia sa pokúsila pristúpiť k zdroju, ku ktorému nemá prístup.</value>
   </data>
   <data name="MissingClientId" xml:space="preserve">
-    <value>Chybí client_id</value>
-    <comment>client_id is missing</comment>
+    <value>Chýba client_id</value>
   </data>
   <data name="MissingToken" xml:space="preserve">
-    <value>Chybí Token</value>
-    <comment>Token is missing</comment>
+    <value>Chýba Token</value>
   </data>
   <data name="MustSelectAtLeastOnePermission" xml:space="preserve">
-    <value>Je třeba zvolit alespoň jedno oprávnění.</value>
-    <comment>Must select at least one permission.</comment>
+    <value>Je potrebné zvoliť aspoň jedno oprávnenie.</value>
   </data>
   <data name="NoMatchingExternalAccount" xml:space="preserve">
     <value>Neplatný učet</value>
-    <comment>Invalid Account</comment>
   </data>
   <data name="NoSubjectFromExternalProvider" xml:space="preserve">
-    <value>Chyba při ověření prostřednictvím externího poskytovatele</value>
-    <comment>Error authenticating with external provider</comment>
+    <value>Chyba pri overení prostredníctvom externého poskytovateľa</value>
   </data>
   <data name="PasswordRequired" xml:space="preserve">
-    <value>Heslo je vyžadováno</value>
-    <comment>Password is required</comment>
+    <value>Heslo je vyžadované</value>
   </data>
   <data name="SslRequired" xml:space="preserve">
-    <value>Je vyžadováno SSL</value>
-    <comment>SSL is required</comment>
+    <value>Je vyžadované SSL</value>
   </data>
   <data name="unauthorized_client" xml:space="preserve">
-    <value>Klientská aplikace nebyla rozpoznána nebo není autorizována.</value>
-    <comment>The client application is not known or is not authorized.</comment>
+    <value>Klientska aplikácia nebola rozpoznaná alebo nie je autorizovaná.</value>
   </data>
   <data name="UnexpectedError" xml:space="preserve">
-    <value>Došlo k neočekávané chybě</value>
-    <comment>There was an unexpected error</comment>
+    <value>Došlo k neočakávanej chybe</value>
   </data>
   <data name="UnsupportedMediaType" xml:space="preserve">
     <value>Nepodporovaný Media Type</value>
-    <comment>Unsupported Media Type</comment>
   </data>
   <data name="unsupported_response_type" xml:space="preserve">
-    <value>Autorizační server neposkytuje požadovaný typ odpovědi.</value>
-    <comment>The authorization server does not support the requested response type.</comment>
+    <value>Autorizačný server neposkytuje požadovaný typ odpovede.</value>
   </data>
   <data name="UsernameRequired" xml:space="preserve">
-    <value>Uživatelské jméno je vyžadováno</value>
-    <comment>Username is required</comment>
+    <value>Užívateľské meno je vyžadované</value>
   </data>
   <data name="NoSignInCookie" xml:space="preserve">
-    <value>Došlo k chybě při určení, ke které aplikaci se chcete přihlásit. Vraťte se do aplikace a pokus opakujte.</value>
-    <comment>There is an error determining which application you are signing into. Return to the application and try again.</comment>
+    <value>Došlo k chybe pri určení, ku ktorej aplikácii sa chcete prihlásiť. Vráťte sa do aplikácie a pokus zopakujte.</value>
   </data>
   <data name="NoExternalProvider" xml:space="preserve">
-    <value>Poskytovatel externího přihlášení nebyl uveden.</value>
-    <comment>The external login provider was not provided.</comment>
+    <value>Poskytovateľ externého prihlásenie nebol uvedený.</value>
   </data>
   <data name="ExternalProviderError" xml:space="preserve">
-    <value>Došlo k chybě při přihlašování prostřednictvím externího poskytovatele. Chybové hlášení je: {0}</value>
-    <comment>There was an error logging into the external provider. The error message is: {0}</comment>
+    <value>Došlo k chybe pri prihlasovaní prostredníctvom externého poskytovateľa. Chybové hlásenie je: {0}</value>
   </data>
   <data name="invalid_request" xml:space="preserve">
-    <value>Klientská aplikace učinila neplatný požadavek.</value>
-    <comment>The client application made an invalid request.</comment>
+    <value>Klientska aplikácia urobila neplatnou požiadavku.</value>
   </data>
 </root>

@@ -117,80 +117,46 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ClientIdRequired" xml:space="preserve">
-    <value>Je vyžadován identifikátor klienta</value>
-    <comment>Client identifier is required</comment>
+  <data name="ClientPermissionsRevoked" xml:space="preserve">
+    <value>Oprávnenia klienta odobrané</value>
   </data>
-  <data name="InvalidUsernameOrPassword" xml:space="preserve">
-    <value>Neplatné uživatelské jméno či heslo</value>
-    <comment>Invalid username or password</comment>
+  <data name="CspReport" xml:space="preserve">
+    <value>Content Security Policy (CSP) Report</value>
   </data>
-  <data name="invalid_scope" xml:space="preserve">
-    <value>Klientská aplikace se pokusila přistoupit ke zdroji, ke kterému nemá přístup.</value>
-    <comment>The client application tried to access a resource it does not have access to.</comment>
+  <data name="ExternalLoginError" xml:space="preserve">
+    <value>Chyba pri externom prihlásení</value>
   </data>
-  <data name="MissingClientId" xml:space="preserve">
-    <value>Chybí client_id</value>
-    <comment>client_id is missing</comment>
+  <data name="ExternalLoginFailure" xml:space="preserve">
+    <value>Zlyhanie pri externom prihlásení</value>
   </data>
-  <data name="MissingToken" xml:space="preserve">
-    <value>Chybí Token</value>
-    <comment>Token is missing</comment>
+  <data name="ExternalLoginSuccess" xml:space="preserve">
+    <value>Úspešné externé prihlásenie</value>
   </data>
-  <data name="MustSelectAtLeastOnePermission" xml:space="preserve">
-    <value>Je třeba zvolit alespoň jedno oprávnění.</value>
-    <comment>Must select at least one permission.</comment>
+  <data name="LocalLoginFailure" xml:space="preserve">
+    <value>Zlyhanie pri lokálnom prihlásení</value>
   </data>
-  <data name="NoMatchingExternalAccount" xml:space="preserve">
-    <value>Neplatný učet</value>
-    <comment>Invalid Account</comment>
+  <data name="LocalLoginSuccess" xml:space="preserve">
+    <value>Úspešné lokálne prihlásenie</value>
   </data>
-  <data name="NoSubjectFromExternalProvider" xml:space="preserve">
-    <value>Chyba při ověření prostřednictvím externího poskytovatele</value>
-    <comment>Error authenticating with external provider</comment>
+  <data name="LogoutEvent" xml:space="preserve">
+    <value>Udalosť odhlásenie</value>
   </data>
-  <data name="PasswordRequired" xml:space="preserve">
-    <value>Heslo je vyžadováno</value>
-    <comment>Password is required</comment>
+  <data name="PartialLogin" xml:space="preserve">
+    <value>Čiastočné prihlásenie</value>
   </data>
-  <data name="SslRequired" xml:space="preserve">
-    <value>Je vyžadováno SSL</value>
-    <comment>SSL is required</comment>
+  <data name="PartialLoginComplete" xml:space="preserve">
+    <value>Čiastočné prihlásenie dokončené</value>
   </data>
-  <data name="unauthorized_client" xml:space="preserve">
-    <value>Klientská aplikace nebyla rozpoznána nebo není autorizována.</value>
-    <comment>The client application is not known or is not authorized.</comment>
+  <data name="PreLoginFailure" xml:space="preserve">
+    <value>Zlyhanie pri pred-prihlásenie</value>
   </data>
-  <data name="UnexpectedError" xml:space="preserve">
-    <value>Došlo k neočekávané chybě</value>
-    <comment>There was an unexpected error</comment>
+  <data name="PreLoginSuccess" xml:space="preserve">
+    <value>Úspešné pred-prihlásenie</value>
   </data>
-  <data name="UnsupportedMediaType" xml:space="preserve">
-    <value>Nepodporovaný Media Type</value>
-    <comment>Unsupported Media Type</comment>
+  <data name="ResourceOwnerFlowLoginFailure" xml:space="preserve">
+    <value>Zlyhanie pri prihlásení toku "Resource Owner Password"</value>
   </data>
-  <data name="unsupported_response_type" xml:space="preserve">
-    <value>Autorizační server neposkytuje požadovaný typ odpovědi.</value>
-    <comment>The authorization server does not support the requested response type.</comment>
-  </data>
-  <data name="UsernameRequired" xml:space="preserve">
-    <value>Uživatelské jméno je vyžadováno</value>
-    <comment>Username is required</comment>
-  </data>
-  <data name="NoSignInCookie" xml:space="preserve">
-    <value>Došlo k chybě při určení, ke které aplikaci se chcete přihlásit. Vraťte se do aplikace a pokus opakujte.</value>
-    <comment>There is an error determining which application you are signing into. Return to the application and try again.</comment>
-  </data>
-  <data name="NoExternalProvider" xml:space="preserve">
-    <value>Poskytovatel externího přihlášení nebyl uveden.</value>
-    <comment>The external login provider was not provided.</comment>
-  </data>
-  <data name="ExternalProviderError" xml:space="preserve">
-    <value>Došlo k chybě při přihlašování prostřednictvím externího poskytovatele. Chybové hlášení je: {0}</value>
-    <comment>There was an error logging into the external provider. The error message is: {0}</comment>
-  </data>
-  <data name="invalid_request" xml:space="preserve">
-    <value>Klientská aplikace učinila neplatný požadavek.</value>
-    <comment>The client application made an invalid request.</comment>
+  <data name="ResourceOwnerFlowLoginSuccess" xml:space="preserve">
+    <value>Úspešné prihlásenie toku "Resource Owner Password"</value>
   </data>
 </root>
