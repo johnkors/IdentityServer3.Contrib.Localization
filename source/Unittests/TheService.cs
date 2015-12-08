@@ -56,7 +56,6 @@ namespace Unittests
             };
             Assert.Throws<ApplicationException>(() => new GlobalizedLocalizationService(options));
         }
-
     
         private static void AssertTranslationExists(string culture, IEnumerable<string> ids, string category)
         {

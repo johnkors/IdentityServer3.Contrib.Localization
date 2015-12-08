@@ -88,6 +88,7 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Events\Events.ru-RU.resx" />
+    <EmbeddedResource Include="Resources\Events\Events.sk-SK.resx" />
     <EmbeddedResource Include="Resources\Events\Events.zh-CN.resx" />
     <EmbeddedResource Include="Resources\Events\Events.nl-NL.resx" />
     <EmbeddedResource Include="Resources\Events\Events.fr-FR.resx" />
@@ -109,6 +110,7 @@
     <EmbeddedResource Include="Resources\Messages\Messages.it-IT.resx" />
     <EmbeddedResource Include="Resources\Messages\Messages.pt-BR.resx" />
     <EmbeddedResource Include="Resources\Messages\Messages.ru-Ru.resx" />
+    <EmbeddedResource Include="Resources\Messages\Messages.sk-SK.resx" />
     <EmbeddedResource Include="Resources\Messages\Messages.zh-CN.resx" />
     <EmbeddedResource Include="Resources\Messages\Messages.nl-NL.resx" />
     <EmbeddedResource Include="Resources\Messages\Messages.fr-FR.resx" />
@@ -128,6 +130,7 @@
     <EmbeddedResource Include="Resources\Scopes\Scopes.it-IT.resx" />
     <EmbeddedResource Include="Resources\Scopes\Scopes.pt-BR.resx" />
     <EmbeddedResource Include="Resources\Scopes\Scopes.ru-RU.resx" />
+    <EmbeddedResource Include="Resources\Scopes\Scopes.sk-SK.resx" />
     <EmbeddedResource Include="Resources\Scopes\Scopes.zh-CN.resx" />
     <EmbeddedResource Include="Resources\Scopes\Scopes.nl-NL.resx" />
     <EmbeddedResource Include="Resources\Scopes\Scopes.fr-FR.resx" />
