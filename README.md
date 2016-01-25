@@ -40,7 +40,8 @@ Pirate culture:
  * [tr-TR (Turkish)](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/tr-TR), [Iltera](https://github.com/iltera) sayesinde!
  * [pirate (yarr)](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/pirate), yarr repo owner!
  * [ar-SA (Arabic)](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/ar-SA), [OsmanMElsayed](https://github.com/OsmanMElsayed) مر من هنا!
- * 
+
+
 ## Install
 
 ```
