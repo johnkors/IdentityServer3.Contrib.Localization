@@ -136,7 +136,7 @@
     <value>Il tuo numero di telefono</value>
   </data>
   <data name="profile_Description" xml:space="preserve">
-    <value>Le tue informazioni del profilo utente (nome, cognome, etc.)</value>
+    <value>Le informazioni del tuo profilo utente (nome, cognome, etc.)</value>
   </data>
   <data name="profile_DisplayName" xml:space="preserve">
     <value>Profilo utente</value>
