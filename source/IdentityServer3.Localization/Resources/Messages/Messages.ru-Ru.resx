@@ -160,7 +160,7 @@
     <value>Требуется SSL</value>
   </data>
   <data name="unauthorized_client" xml:space="preserve">
-    <value>Клиентское приложение не ивестно или не авторизовано.</value>
+    <value>Клиентское приложение не известно или не авторизовано.</value>
   </data>
   <data name="UnexpectedError" xml:space="preserve">
     <value>Произошла необработанная ошибка.</value>
@@ -172,6 +172,6 @@
     <value>Сервер авторизации не поддерживает запрошенный тип авторизации.</value>
   </data>
   <data name="UsernameRequired" xml:space="preserve">
-    <value>Неоходимо ввести имя пользователя</value>
+    <value>Необходимо ввести имя пользователя</value>
   </data>
 </root>
