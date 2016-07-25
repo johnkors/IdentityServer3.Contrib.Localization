@@ -1,27 +1,28 @@
-﻿master:[![master](https://ci.appveyor.com/api/projects/status/63g2yulmxod35vd1/branch/master?svg=true)](https://ci.appveyor.com/project/JohnKorsnes/identityserver3-contrib-localization/branch/master)
-dev:[![dev](https://ci.appveyor.com/api/projects/status/63g2yulmxod35vd1/branch/dev?svg=true)](https://ci.appveyor.com/project/JohnKorsnes/identityserver3-contrib-localization/branch/dev)
-[![NuGet Stable](http://img.shields.io/nuget/v/IdentityServer3.Localization.svg?style=flat)](https://www.nuget.org/packages/IdentityServer3.Localization/)
-[![Downloads](https://img.shields.io/nuget/dt/IdentityServer3.Localization.svg)](https://www.nuget.org/packages/IdentityServer3.Localization/)
+﻿| master | dev | latest |
+| - |  - | - |
+| [![master](https://ci.appveyor.com/api/projects/status/63g2yulmxod35vd1/branch/master?svg=true)](https://ci.appveyor.com/project/JohnKorsnes/identityserver3-contrib-localization/branch/master) | [![dev](https://ci.appveyor.com/api/projects/status/63g2yulmxod35vd1/branch/dev?svg=true)](https://ci.appveyor.com/project/JohnKorsnes/identityserver3-contrib-localization/branch/dev) | [![NuGet Stable](http://img.shields.io/nuget/v/IdentityServer3.Localization.svg?style=flat)](https://www.nuget.org/packages/IdentityServer3.Localization/)|
+
 
 # Contents
-
-Implementation of IdentityServerV3s ILocalizationService
-
+Implementation of IdentityServerV3's ILocalizationService.
+ ### What does it translate?
+  - Resource strings defined by IdentityServer. See [a list of defined resources here.](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/Default)
+  - If what you want to translate is not defined by those resources, you would need to implement it yourself.
 
 ## Usage
 
-Specific culture:
+- Specific culture:
 ```
    var options = new LocaleOptions { Locale = "nb-NO" };
    var localizationService = new GlobalizedLocalizationService(options);
 ```
 
-To use IdentityServer3s default provided localization:
+- To use IdentityServer3s default provided localization:
 ```
    var localizationService = new GlobalizedLocalizationService();
 ```
 
-Pirate culture:
+- Pirate culture:
 ```
    var options = new LocaleOptions { Locale = "pirate" }; // ye be warned!
    var localizationService = new GlobalizedLocalizationService(options);
@@ -29,17 +30,7 @@ Pirate culture:
 
 
 ## Supported languages
- * [Default/English (the default provided by the DefaultLocalizationService)](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/Default)  
- * [de-DE (German)](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/de-DE), danke Schön [ManuelRauber](https://github.com/ManuelRauber)!
- * [es-AR (Spanish, Argentina)](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/es-AR), ¡Muchas gracias, [gustavoruscitto](https://github.com/gustavoruscitto)!
- * [fr-FR (French)](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/fr-FR), Merci, [ghys](https://github.com/ghys)!
- * [nb-NO (Norwegian Bokmål)](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/nb-NO)
- * [pl-PL (Polish)](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/pl-PL)
- * [ro-RO (Romanian)](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/ro-RO), vă mulțumesc, [totpero](https://github.com/totpero)!
- * [sv-SE (Swedish)](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/de-DE), tack [krippz](https://github.com/krippz)!
- * [tr-TR (Turkish)](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/tr-TR), [Iltera](https://github.com/iltera) sayesinde!
- * [pirate (yarr)](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/pirate), yarr repo owner!
- * [ar-SA (Arabic)](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/ar-SA), [OsmanMElsayed](https://github.com/OsmanMElsayed) مَرَّ مِن هُنا!
+ * See the [live docs of all translations](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/Default)
 
 ## Install
 
@@ -60,13 +51,10 @@ How to add another language:
 
   1. Events.ISO-code-for-your-translation.resx
   2. Messages.ISO-code-for-your-translation.resx
-   3. Scopes.ISO-code-for-your-translation.resx
+  3. Scopes.ISO-code-for-your-translation.resx
 
  * Run the tests and fix any errors so they are green!
  * Rebase off upstream if behind, and submit the Pull Request
-
-
-
 
 ## Dependencies
 
