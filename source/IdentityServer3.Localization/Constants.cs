@@ -21,5 +21,6 @@ namespace IdentityServer3.Core.Services.Contrib
         public const string plPL = "pl-PL";
         public const string skSK = "sk-SK";
         public const string arSa = "ar-SA";
+        public const string fiFI = "fi-FI";
     }
 }

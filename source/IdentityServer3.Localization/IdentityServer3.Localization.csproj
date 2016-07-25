@@ -81,6 +81,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Resources\Events\Events.fi-FI.resx" />
     <EmbeddedResource Include="Resources\Events\Events.ar-SA.resx" />
     <EmbeddedResource Include="Resources\Events\Events.pl-PL.resx" />
     <EmbeddedResource Include="Resources\Events\Events.cs-CZ.resx" />
@@ -113,6 +114,7 @@
     <EmbeddedResource Include="Resources\Messages\Messages.pt-BR.resx" />
     <EmbeddedResource Include="Resources\Messages\Messages.ru-Ru.resx" />
     <EmbeddedResource Include="Resources\Messages\Messages.sk-SK.resx" />
+    <EmbeddedResource Include="Resources\Messages\Messages.fi-FI.resx" />
     <EmbeddedResource Include="Resources\Messages\Messages.zh-CN.resx" />
     <EmbeddedResource Include="Resources\Messages\Messages.nl-NL.resx" />
     <EmbeddedResource Include="Resources\Messages\Messages.fr-FR.resx" />
@@ -134,6 +136,7 @@
     <EmbeddedResource Include="Resources\Scopes\Scopes.pt-BR.resx" />
     <EmbeddedResource Include="Resources\Scopes\Scopes.ru-RU.resx" />
     <EmbeddedResource Include="Resources\Scopes\Scopes.sk-SK.resx" />
+    <EmbeddedResource Include="Resources\Scopes\Scopes.fi-FI.resx" />
     <EmbeddedResource Include="Resources\Scopes\Scopes.zh-CN.resx" />
     <EmbeddedResource Include="Resources\Scopes\Scopes.nl-NL.resx" />
     <EmbeddedResource Include="Resources\Scopes\Scopes.fr-FR.resx" />
