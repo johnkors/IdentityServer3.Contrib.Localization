@@ -2,10 +2,10 @@
 | --- | --- | --- |
 | [![master](https://ci.appveyor.com/api/projects/status/63g2yulmxod35vd1/branch/master?svg=true)](https://ci.appveyor.com/project/JohnKorsnes/identityserver3-contrib-localization/branch/master) | [![dev](https://ci.appveyor.com/api/projects/status/63g2yulmxod35vd1/branch/dev?svg=true)](https://ci.appveyor.com/project/JohnKorsnes/identityserver3-contrib-localization/branch/dev) | [![NuGet Stable](http://img.shields.io/nuget/v/IdentityServer3.Localization.svg?style=flat)](https://www.nuget.org/packages/IdentityServer3.Localization/)|
 
-
 # Contents
 Implementation of IdentityServerV3's ILocalizationService.
- ### What does it translate?
+
+### What does it translate?
   - Resource strings defined by IdentityServer. See [a list of defined resources here.](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/Default)
   - If what you want to translate is not defined by those resources, you would need to implement it yourself.
 
