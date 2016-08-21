@@ -38,6 +38,9 @@ Implementation of IdentityServerV3's ILocalizationService.
 
 - Making use of the users language setting:
 ```
+using System.Net.Http.Headers; // if you want to use StringWithQualityHeaderValue
+ 
+
   var opts = new LocaleOptions
   {
       LocaleProvider = env =>
@@ -45,8 +48,13 @@ Implementation of IdentityServerV3's ILocalizationService.
           var owinContext = new OwinContext(env);
           var owinRequest = owinContext.Request;
           var headers = owinRequest.Headers;
-          var locale = headers["accept-language"].ToString().Contains("nb") ? "nb-NO" : "es-AR";
-          return locale;
+          var accept_language_header = headers["accept-language"].ToString();
+          var languages = accept_language_header
+                              .Split(',')
+                              .Select(StringWithQualityHeaderValue.Parse)
+                              .OrderByDescending(s => s.Quality.GetValueOrDefault(1));
+         var locale = languages.First().Value;
+         return locale;
       }
   };
   
