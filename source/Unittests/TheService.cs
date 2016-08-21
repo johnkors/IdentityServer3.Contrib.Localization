@@ -21,7 +21,7 @@ namespace Unittests
         }
 
         [Theory]
-        [InlineData("af")]
+        [InlineData("ar")]
         [InlineData("ar-SA")]
         [InlineData("cs-CZ")]
         [InlineData("de")]
@@ -131,7 +131,7 @@ namespace Unittests
         }
 
         [Theory]
-        [InlineData("af")]
+        [InlineData("ar")]
         [InlineData("ar-SA")]
         [InlineData("cs-CZ")]
         [InlineData("de")]
