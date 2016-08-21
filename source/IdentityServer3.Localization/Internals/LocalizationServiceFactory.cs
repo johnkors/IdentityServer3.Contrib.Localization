@@ -48,7 +48,7 @@ namespace IdentityServer3.Core.Services.Contrib.Internals
 
         private static readonly IDictionary<string, string> LanguageToLocales = new Dictionary<string, string>
             {
-                {"af", "ar-SA"},
+                {"ar", "ar-SA"},
                 {"da", "da-DK"},
                 {"de", "de-DE"},
                 {"es", "es-ES"},
