@@ -36,6 +36,24 @@ Implementation of IdentityServerV3's ILocalizationService.
 
 ```
 
+- Making use of the users language setting:
+```
+  var opts = new LocaleOptions
+  {
+      LocaleProvider = env =>
+      {
+          var owinContext = new OwinContext(env);
+          var owinRequest = owinContext.Request;
+          var headers = owinRequest.Headers;
+          var locale = headers["accept-language"].ToString().Contains("nb") ? "nb-NO" : "es-AR";
+          return locale;
+      }
+  };
+  
+  factory.Register(new Registration<LocaleOptions>(opts));
+  factory.LocalizationService = new Registration<ILocalizationService, GlobalizedLocalizationService>();
+
+```
 
 ## Supported languages
  * See the [live docs of all translations](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/Default)
