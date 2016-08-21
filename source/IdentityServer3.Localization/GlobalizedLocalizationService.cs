@@ -1,6 +1,5 @@
 ﻿using System;
 using IdentityServer3.Core.Services.Contrib.Internals;
-using System.Collections.Generic;
 
 namespace IdentityServer3.Core.Services.Contrib
 {
@@ -23,11 +22,6 @@ namespace IdentityServer3.Core.Services.Contrib
         {
             var service = LocalizationServiceFactory.Create(_internalOpts);
             return service.GetString(category, id);
-        }
-
-        public static IEnumerable<string> GetAvailableLocales()
-        {
-            return LocalizationServiceFactory.AvailableLocalizationServices.Keys;
         }
     }
 }
