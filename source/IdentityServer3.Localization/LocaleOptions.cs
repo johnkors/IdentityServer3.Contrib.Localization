@@ -1,10 +1,17 @@
 using System;
 using System.Collections.Generic;
+using IdentityServer3.Core.Services.Default;
 
 namespace IdentityServer3.Core.Services.Contrib
 {
     public class LocaleOptions
     {
+
+        public LocaleOptions()
+        {
+            FallbackLocalizationService = new DefaultLocalizationService();
+        }
+
         public string Locale
         {
             set
@@ -24,15 +31,14 @@ namespace IdentityServer3.Core.Services.Contrib
         /// </summary>
         public Func<IDictionary<string, object>, string> LocaleProvider { get; set; }
 
-        internal string GetLocale()
+        internal string GetLocale(IDictionary<string, object> env)
         {
-            if (LocaleProvider != null && EnvironmentService != null)
+            if (LocaleProvider != null )
             {
-                return LocaleProvider(EnvironmentService.Environment);
+                return LocaleProvider(env);
             }
             return Constants.enUS;
         }
-
-        internal OwinEnvironmentService EnvironmentService { get; set; }
+        
     }
 }

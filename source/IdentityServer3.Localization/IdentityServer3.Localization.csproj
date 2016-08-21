@@ -86,7 +86,6 @@
     <EmbeddedResource Include="Resources\Events\Events.es-ES.resx" />
     <EmbeddedResource Include="Resources\Events\Events.fi-FI.resx" />
     <EmbeddedResource Include="Resources\Events\Events.ar-SA.resx" />
-    <EmbeddedResource Include="Resources\Events\Events.nb.resx" />
     <EmbeddedResource Include="Resources\Events\Events.pl-PL.resx" />
     <EmbeddedResource Include="Resources\Events\Events.cs-CZ.resx" />
     <EmbeddedResource Include="Resources\Events\Events.it-IT.resx" />
@@ -115,7 +114,6 @@
     <EmbeddedResource Include="Resources\Messages\Messages.en-US.resx" />
     <EmbeddedResource Include="Resources\Messages\Messages.ar-SA.resx" />
     <EmbeddedResource Include="Resources\Messages\Messages.es-ES.resx" />
-    <EmbeddedResource Include="Resources\Messages\Messages.nb.resx" />
     <EmbeddedResource Include="Resources\Messages\Messages.pl-PL.resx" />
     <EmbeddedResource Include="Resources\Messages\Messages.cs-CZ.resx" />
     <EmbeddedResource Include="Resources\Messages\Messages.it-IT.resx" />
@@ -141,7 +139,6 @@
     <EmbeddedResource Include="Resources\Scopes\Scopes.en-US.resx" />
     <EmbeddedResource Include="Resources\Scopes\Scopes.ar-SA.resx" />
     <EmbeddedResource Include="Resources\Scopes\Scopes.es-ES.resx" />
-    <EmbeddedResource Include="Resources\Scopes\Scopes.nb.resx" />
     <EmbeddedResource Include="Resources\Scopes\Scopes.pl-PL.resx" />
     <EmbeddedResource Include="Resources\Scopes\Scopes.cs-CZ.resx" />
     <EmbeddedResource Include="Resources\Scopes\Scopes.it-IT.resx" />
