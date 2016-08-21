@@ -10,7 +10,7 @@ namespace IdentityServer3.Core.Services.Contrib.Internals
         public FallbackDecorator(ILocalizationService inner, ILocalizationService fallBackService)
         {
             _inner = inner;
-            _fallBackService = fallBackService ?? new DefaultLocalizationService();
+            _fallBackService = fallBackService;
         }
 
         public string GetString(string category, string id)

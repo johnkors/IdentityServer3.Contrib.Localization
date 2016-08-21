@@ -1,10 +1,17 @@
 using System;
 using System.Collections.Generic;
+using IdentityServer3.Core.Services.Default;
 
 namespace IdentityServer3.Core.Services.Contrib
 {
     public class LocaleOptions
     {
+
+        public LocaleOptions()
+        {
+            FallbackLocalizationService = new DefaultLocalizationService();
+        }
+
         public string Locale
         {
             set
