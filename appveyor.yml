@@ -5,7 +5,7 @@
     only:
       - master
   configuration: Release
-  version: 0.2.{build}
+  version: 0.3.{build}
   assembly_info:
     patch: true
     file: '**\AssemblyInfo.*'
