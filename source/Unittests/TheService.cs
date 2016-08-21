@@ -8,6 +8,7 @@ using System.Diagnostics;
 using System.Linq;
 using Xunit;
 using Xunit.Sdk;
+using Constants = IdentityServer3.Core.Constants;
 using IdSrvConstants = IdentityServer3.Core.Constants.LocalizationCategories;
 
 namespace Unittests
@@ -19,17 +20,34 @@ namespace Unittests
             Debug.Listeners.Add(new DefaultTraceListener());
         }
 
-        [Fact]
-        public void HasTranslationsForAllPublicIds()
+        [Theory]
+        [InlineData("ar-SA")]
+        [InlineData("cs-CZ")]
+        [InlineData("de-DE")]
+        [InlineData("da-DK")]
+        [InlineData("en-GB")]
+        [InlineData("en-US")]
+        [InlineData("es-AR")]
+        [InlineData("es-ES")]
+        [InlineData("fi-FI")]
+        [InlineData("fr-FR")]
+        [InlineData("it-IT")]
+        [InlineData("nb")]
+        [InlineData("nb-NO")]
+        [InlineData("nl-NL")]
+        [InlineData("pl-PL")]
+        [InlineData("pt-BR")]
+        [InlineData("ro-RO")]
+        [InlineData("ru-RU")]
+        [InlineData("sk-SK")]
+        [InlineData("sv-SE")]
+        [InlineData("tr-TR")]
+        [InlineData("zh-CN")]
+        public void HasTranslationsForAllPublicIds(string availableCulture)
         {
-            var availableCultures = new List<string> { "nb" };
-        
-            foreach (var availableCulture in availableCultures)
-            {
-                AssertTranslationExists(availableCulture, TestHelper.GetAllMessageIds(), IdSrvConstants.Messages);
-                AssertTranslationExists(availableCulture, TestHelper.GetAllEventIds(), IdSrvConstants.Events);
-                AssertTranslationExists(availableCulture, TestHelper.GetAllScopeIds(), IdSrvConstants.Scopes);
-            }
+            AssertTranslationExists(availableCulture, TestHelper.GetAllMessageIds(), IdSrvConstants.Messages);
+            AssertTranslationExists(availableCulture, TestHelper.GetAllEventIds(), IdSrvConstants.Events);
+            AssertTranslationExists(availableCulture, TestHelper.GetAllScopeIds(), IdSrvConstants.Scopes);
         }
 
         [Fact]
@@ -65,7 +83,7 @@ namespace Unittests
 
             var service = new GlobalizedLocalizationService(envServiceMock, options);
 
-            //var dontCare = service.GetString(IdSrvConstants.Messages, MessageIds.MissingClientId);
+            var dontCare = service.GetString(IdSrvConstants.Messages, MessageIds.MissingClientId);
         }
 
         [Fact]
@@ -73,7 +91,7 @@ namespace Unittests
         {
             var options = new LocaleOptions
             {
-               LocaleProvider = env => "nb-NO" 
+                LocaleProvider = env => "nb-NO"
             };
             var envServiceMock = new Fake<OwinEnvironmentService>().FakedObject;
 
@@ -93,11 +111,61 @@ namespace Unittests
             {
                 LocaleProvider = env => env["UserSettings.Language"].ToString()
             };
-            
+
             var service = new GlobalizedLocalizationService(owinEnvironmentService, options);
             var norwegianString = service.GetString(IdSrvConstants.Messages, MessageIds.MissingClientId);
 
             Assert.Equal("ClientId mangler", norwegianString);
+        }
+
+        [Theory]
+        [InlineData("ar-SA")]
+        [InlineData("cs-CZ")]
+        [InlineData("de-DE")]
+        [InlineData("da-DK")]
+        [InlineData("es-AR")]
+        [InlineData("es-ES")]
+        [InlineData("fi-FI")]
+        [InlineData("fr-FR")]
+        [InlineData("it-IT")]
+        [InlineData("nb")]
+        [InlineData("nb-NO")]
+        [InlineData("nl-NL")]
+        [InlineData("pl-PL")]
+        [InlineData("pt-BR")]
+        [InlineData("ro-RO")]
+        [InlineData("ru-RU")]
+        [InlineData("sk-SK")]
+        [InlineData("sv-SE")]
+        [InlineData("tr-TR")]
+        [InlineData("zh-CN")]
+        public void ContainsLocales(string locale)
+        {
+            var env = new Dictionary<string, object>();
+            var options = new LocaleOptions
+            {
+                LocaleProvider = e => locale
+            };
+            var global = new GlobalizedLocalizationService(new OwinEnvironmentService(env), options);
+            var resource = global.GetString(IdSrvConstants.Messages, MessageIds.MissingClientId);
+
+            Assert.NotEqual("client_id is missing", resource);
+        }
+
+        [Theory]
+        [InlineData("en-GB")]
+        [InlineData("en-US")]
+        public void EnglishOnesAsPrDefault(string locale)
+        {
+            var env = new Dictionary<string, object>();
+            var options = new LocaleOptions
+            {
+                LocaleProvider = e => locale
+            };
+            var global = new GlobalizedLocalizationService(new OwinEnvironmentService(env), options);
+            var resource = global.GetString(IdSrvConstants.Messages, MessageIds.MissingClientId);
+
+            Assert.Equal("client_id is missing", resource);
         }
 
         private static void AssertTranslationExists(string culture, IEnumerable<string> ids, string category)
@@ -110,7 +178,7 @@ namespace Unittests
 
             var service = new GlobalizedLocalizationService(envServiceMock, options);
             var notFoundTranslations = new List<string>();
-            
+
             foreach (var id in ids)
             {
                 var localizedString = service.GetString(category, id);
@@ -127,14 +195,14 @@ namespace Unittests
                     Trace.WriteLine(message);
                     Debug.WriteLine(message);
                     Console.WriteLine(message);
-                    Assert.NotEqual("", localizedString.Trim());    
+                    Assert.NotEqual("", localizedString.Trim());
                 }
-                
+
             }
             if (notFoundTranslations.Any())
             {
                 var concated = notFoundTranslations.Aggregate((x, y) => x + ", " + y);
-                throw new AssertActualExpectedException("Some translation", "NOTHING!", concated );
+                throw new AssertActualExpectedException("Some translation", "NOTHING!", concated);
             }
         }
     }
@@ -143,7 +211,7 @@ namespace Unittests
     {
         public static IEnumerable<string> GetAllMessageIds()
         {
-            return typeof(MessageIds).GetFields().Select( m => m.GetRawConstantValue().ToString());            
+            return typeof(MessageIds).GetFields().Select(m => m.GetRawConstantValue().ToString());
         }
 
         public static IEnumerable<string> GetAllEventIds()

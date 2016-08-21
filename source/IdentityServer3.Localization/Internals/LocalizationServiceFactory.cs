@@ -10,7 +10,17 @@ namespace IdentityServer3.Core.Services.Contrib.Internals
         {
             var locale = options.GetLocale();
 
-            var inner = new ResourceFileLocalizationService(new CultureInfo(locale));
+            CultureInfo cultureInfo;
+            try
+            {
+                cultureInfo = new CultureInfo(locale);
+            }
+            catch (CultureNotFoundException)
+            {
+                cultureInfo = new CultureInfo(Constants.enUS);
+            }
+
+            var inner = new ResourceFileLocalizationService(cultureInfo);
 
             if (options.FallbackLocalizationService != null)
             {
