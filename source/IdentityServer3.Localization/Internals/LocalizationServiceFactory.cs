@@ -37,7 +37,10 @@ namespace IdentityServer3.Core.Services.Contrib.Internals
 
         public static ILocalizationService Create(LocaleOptions options)
         {
-            var inner = AvailableLocalizationServices[options.Locale];
+            var locale = options.GetLocale();
+       
+            var inner = AvailableLocalizationServices[locale];
+
             if (options.FallbackLocalizationService != null)
             {
                 return new FallbackDecorator(inner, options.FallbackLocalizationService);
