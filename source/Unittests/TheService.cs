@@ -38,8 +38,14 @@ namespace Unittests
             const string someid = "SomeId";
             var mock = new Fake<ILocalizationService>();
             mock.CallsTo(loc => loc.GetString(IdSrvConstants.Messages, someid)).Returns("fallbackValue");
-            
-            var service = new GlobalizedLocalizationService(new LocaleOptions{ Locale = "nb-NO", FallbackLocalizationService = mock.FakedObject});
+
+            var localeOptions = new LocaleOptions
+            {
+                LocaleProvider = env => "nb-NO",
+                FallbackLocalizationService = mock.FakedObject
+            };
+            var envServiceMock = new Fake<OwinEnvironmentService>();
+            var service = new GlobalizedLocalizationService(envServiceMock.FakedObject, localeOptions);
 
             var result = service.GetString(IdSrvConstants.Messages, someid);
             Assert.Equal("fallbackValue", result);
@@ -48,22 +54,61 @@ namespace Unittests
         [Theory]
         [InlineData("")]
         [InlineData("notexisting")]
-        public void ThrowsExceptionForUnknownLocales(string locale)
+        public void DoesNotThrowsExceptionForUnknownLocales(string locale)
         {
             var options = new LocaleOptions
             {
-                Locale = locale
+                LocaleProvider = env => locale
             };
-            Assert.Throws<ApplicationException>(() => new GlobalizedLocalizationService(options));
+
+            var envServiceMock = new Fake<OwinEnvironmentService>().FakedObject;
+
+            var service = new GlobalizedLocalizationService(envServiceMock, options);
+
+            //var dontCare = service.GetString(IdSrvConstants.Messages, MessageIds.MissingClientId);
         }
-    
+
+        [Fact]
+        public void FetchesResourceWhenUsingLocaleProviderFunc()
+        {
+            var options = new LocaleOptions
+            {
+               LocaleProvider = env => "nb-NO" 
+            };
+            var envServiceMock = new Fake<OwinEnvironmentService>().FakedObject;
+
+            var service = new GlobalizedLocalizationService(envServiceMock, options);
+            var norwegianString = service.GetString(IdSrvConstants.Messages, MessageIds.MissingClientId);
+
+            Assert.Equal("ClientId mangler", norwegianString);
+        }
+
+        [Fact]
+        public void FetchesResrouceBasedOnOwinEnvironment()
+        {
+            IDictionary<string, object> environment = new Dictionary<string, object>();
+            environment["UserSettings.Language"] = "nb-NO";
+            var owinEnvironmentService = new OwinEnvironmentService(environment);
+            var options = new LocaleOptions
+            {
+                LocaleProvider = env => env["UserSettings.Language"].ToString()
+            };
+            
+            var service = new GlobalizedLocalizationService(owinEnvironmentService, options);
+            var norwegianString = service.GetString(IdSrvConstants.Messages, MessageIds.MissingClientId);
+
+            Assert.Equal("ClientId mangler", norwegianString);
+        }
+
         private static void AssertTranslationExists(string culture, IEnumerable<string> ids, string category)
         {
             var options = new LocaleOptions
             {
-                Locale = culture
+                LocaleProvider = env => culture
             };
-            var service = new GlobalizedLocalizationService(options);
+            var envServiceMock = new Fake<OwinEnvironmentService>().FakedObject;
+
+            var service = new GlobalizedLocalizationService(envServiceMock, options);
             var notFoundTranslations = new List<string>();
             
             foreach (var id in ids)

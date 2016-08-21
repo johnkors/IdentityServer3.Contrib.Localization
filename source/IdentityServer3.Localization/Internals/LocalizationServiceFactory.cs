@@ -15,29 +15,36 @@ namespace IdentityServer3.Core.Services.Contrib.Internals
                 {Constants.Default, new DefaultLocalizationService()},
                 {Constants.Pirate, new PirateLocalizationService()}
             };
-            AvailableLocalizationServices.Add(CreateResourceBased(Constants.deDE));
-            AvailableLocalizationServices.Add(CreateResourceBased(Constants.esAR));
-            AvailableLocalizationServices.Add(CreateResourceBased(Constants.frFR));
-            AvailableLocalizationServices.Add(CreateResourceBased(Constants.nbNO));
-            AvailableLocalizationServices.Add(CreateResourceBased(Constants.svSE));
-            AvailableLocalizationServices.Add(CreateResourceBased(Constants.trTR));
-            AvailableLocalizationServices.Add(CreateResourceBased(Constants.roRO));
-            AvailableLocalizationServices.Add(CreateResourceBased(Constants.nlNL));
-            AvailableLocalizationServices.Add(CreateResourceBased(Constants.zhCN));
-            AvailableLocalizationServices.Add(CreateResourceBased(Constants.daDK));
-            AvailableLocalizationServices.Add(CreateResourceBased(Constants.ruRU));
-            AvailableLocalizationServices.Add(CreateResourceBased(Constants.ptBR));
-            AvailableLocalizationServices.Add(CreateResourceBased(Constants.csCZ));
-            AvailableLocalizationServices.Add(CreateResourceBased(Constants.plPL));
-            AvailableLocalizationServices.Add(CreateResourceBased(Constants.itIT));
-            AvailableLocalizationServices.Add(CreateResourceBased(Constants.skSK));
+
             AvailableLocalizationServices.Add(CreateResourceBased(Constants.arSa));
+            AvailableLocalizationServices.Add(CreateResourceBased(Constants.csCZ));
+            AvailableLocalizationServices.Add(CreateResourceBased(Constants.deDE));
+            AvailableLocalizationServices.Add(CreateResourceBased(Constants.daDK));
+            AvailableLocalizationServices.Add(CreateResourceBased(Constants.enGB));
+            AvailableLocalizationServices.Add(CreateResourceBased(Constants.enUS));
+            AvailableLocalizationServices.Add(CreateResourceBased(Constants.esAR));
+            AvailableLocalizationServices.Add(CreateResourceBased(Constants.esES));
             AvailableLocalizationServices.Add(CreateResourceBased(Constants.fiFI));
+            AvailableLocalizationServices.Add(CreateResourceBased(Constants.frFR));
+            AvailableLocalizationServices.Add(CreateResourceBased(Constants.itIT));
+            AvailableLocalizationServices.Add(CreateResourceBased(Constants.nbNO));
+            AvailableLocalizationServices.Add(CreateResourceBased(Constants.nlNL));
+            AvailableLocalizationServices.Add(CreateResourceBased(Constants.plPL));
+            AvailableLocalizationServices.Add(CreateResourceBased(Constants.ptBR));
+            AvailableLocalizationServices.Add(CreateResourceBased(Constants.roRO));
+            AvailableLocalizationServices.Add(CreateResourceBased(Constants.ruRU));
+            AvailableLocalizationServices.Add(CreateResourceBased(Constants.svSE));
+            AvailableLocalizationServices.Add(CreateResourceBased(Constants.skSK));
+            AvailableLocalizationServices.Add(CreateResourceBased(Constants.trTR));
+            AvailableLocalizationServices.Add(CreateResourceBased(Constants.zhCN));
         }
 
         public static ILocalizationService Create(LocaleOptions options)
         {
-            var inner = AvailableLocalizationServices[options.Locale];
+            var locale = options.GetLocale();
+       
+            var inner = AvailableLocalizationServices[locale];
+
             if (options.FallbackLocalizationService != null)
             {
                 return new FallbackDecorator(inner, options.FallbackLocalizationService);

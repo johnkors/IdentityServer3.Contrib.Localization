@@ -5,7 +5,7 @@
     only:
       - master
   configuration: Release
-  version: 0.2.{build}
+  version: 0.3.{build}
   assembly_info:
     patch: true
     file: '**\AssemblyInfo.*'
@@ -38,7 +38,7 @@
       - dev
 
   configuration: Release
-  version: 0.3.{build}-pre
+  version: 0.3.{build}-beta
   assembly_info:
     patch: true
     file: '**\AssemblyInfo.*'
@@ -57,6 +57,11 @@
   test:
     assemblies:
       - '**\*tests.dll'
+  deploy:
+    provider: NuGet
+    api_key:
+      secure: di77CstF0jvvy/vMgIrYsvrL8ErTWxKbAImcUDdUERD/Zosdta7uM07XuW19vweY
+    artifact: /.*\.nupkg/
 
 # "fall back" configuration for all other branches
 # no "branches" section defined

@@ -13,21 +13,47 @@ Implementation of IdentityServerV3's ILocalizationService.
 
 - Specific culture:
 ```
-   var options = new LocaleOptions { Locale = "nb-NO" };
-   var localizationService = new GlobalizedLocalizationService(options);
+   var factory = new IdentityServerServiceFactory();
+   var options = new LocaleOptions { LocaleProvider = env => "nb-NO" };
+
+   factory.Register(new Registration<LocaleOptions>(options));   
+   factory.LocalizationService = new Registration<ILocalizationService, GlobalizedLocalizationService>();
 ```
 
-- To use IdentityServer3s default provided localization:
+- To use IdentityServer3s default provided localization fixed:
 ```
-   var localizationService = new GlobalizedLocalizationService();
-```
-
-- Pirate culture:
-```
-   var options = new LocaleOptions { Locale = "pirate" }; // ye be warned!
-   var localizationService = new GlobalizedLocalizationService(options);
+   var factory = new IdentityServerServiceFactory();
+   factory.LocalizationService = new Registration<ILocalizationService, GlobalizedLocalizationService>();
 ```
 
+- To use Pirate culture:
+```
+   var factory = new IdentityServerServiceFactory();
+   var options = new LocaleOptions { LocaleProvider = env => "pirate" };
+
+   factory.Register(new Registration<LocaleOptions>(options));   
+   factory.LocalizationService = new Registration<ILocalizationService, GlobalizedLocalizationService>();
+
+```
+
+- Making use of the users language setting:
+```
+  var opts = new LocaleOptions
+  {
+      LocaleProvider = env =>
+      {
+          var owinContext = new OwinContext(env);
+          var owinRequest = owinContext.Request;
+          var headers = owinRequest.Headers;
+          var locale = headers["accept-language"].ToString().Contains("nb") ? "nb-NO" : "es-AR";
+          return locale;
+      }
+  };
+  
+  factory.Register(new Registration<LocaleOptions>(opts));
+  factory.LocalizationService = new Registration<ILocalizationService, GlobalizedLocalizationService>();
+
+```
 
 ## Supported languages
  * See the [live docs of all translations](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/Default)
