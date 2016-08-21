@@ -1,4 +1,5 @@
-﻿using IdentityServer3.Core.Services.Contrib.Internals;
+﻿using System;
+using IdentityServer3.Core.Services.Contrib.Internals;
 using System.Collections.Generic;
 
 namespace IdentityServer3.Core.Services.Contrib
@@ -9,9 +10,13 @@ namespace IdentityServer3.Core.Services.Contrib
 
         public GlobalizedLocalizationService(OwinEnvironmentService owinEnvironmentService, LocaleOptions options = null)
         {
+            if (owinEnvironmentService == null)
+            {
+                throw new ArgumentException(@"Cannot be null. Is needed for LocaleProvider Func API. Did you register this service correctly?", "owinEnvironmentService");
+            }
+
             _internalOpts = options ?? new LocaleOptions();
             _internalOpts.EnvironmentService = owinEnvironmentService;
-            _internalOpts.Validate();
         }
 
         public string GetString(string category, string id)

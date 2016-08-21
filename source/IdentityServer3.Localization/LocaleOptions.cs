@@ -1,13 +1,18 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using IdentityServer3.Core.Logging;
 
 namespace IdentityServer3.Core.Services.Contrib
 {
     public class LocaleOptions
     {
-        public static readonly ILog Logger = LogProvider.GetCurrentClassLogger();
+        public string Locale
+        {
+            set
+            {
+                throw new ApplicationException("Obsolete. Use the new LocaleProvider func instead. opts.LocaleProvider = env => es-ES ");
+            }
+        }
+
         /// <summary>
         /// The localization service to be of use when none is found for the given resouce & locale. Default: english.
         /// </summary>
@@ -29,14 +34,5 @@ namespace IdentityServer3.Core.Services.Contrib
         }
 
         internal OwinEnvironmentService EnvironmentService { get; set; }
-
-
-        internal void Validate()
-        {
-            if (EnvironmentService == null)
-            {
-                throw new ArgumentException(string.Format("OwinEnvironmentService was null"));
-            }
-        }
     }
 }
