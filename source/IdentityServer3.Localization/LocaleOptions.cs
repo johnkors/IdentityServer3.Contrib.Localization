@@ -1,11 +1,13 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using IdentityServer3.Core.Logging;
 
 namespace IdentityServer3.Core.Services.Contrib
 {
     public class LocaleOptions
     {
+        public static readonly ILog Logger = LogProvider.GetCurrentClassLogger();
         /// <summary>
         /// The localization service to be of use when none is found for the given resouce & locale. Default: english.
         /// </summary>
@@ -29,18 +31,11 @@ namespace IdentityServer3.Core.Services.Contrib
         internal OwinEnvironmentService EnvironmentService { get; set; }
 
 
-        internal void Validate(IEnumerable<string> availableLocales)
+        internal void Validate()
         {
-            var locale = GetLocale();
-            var providedFixedLocaleDoesNotExist = locale == null || locale.Trim() == string.Empty || !availableLocales.Contains(locale);
-            if (providedFixedLocaleDoesNotExist)
+            if (EnvironmentService == null)
             {
-                throw new ApplicationException(string.Format("Localization '{0}' unavailable. Create a Pull Request on GitHub!", locale));
-            }
-
-            if (string.IsNullOrEmpty(locale) && LocaleProvider != null && EnvironmentService == null)
-            {
-                throw new ApplicationException(string.Format("When using the LocaleProvider Func API, you need to provide an OwinEnvironmentService. Was null."));
+                throw new ArgumentException(string.Format("OwinEnvironmentService was null"));
             }
         }
     }

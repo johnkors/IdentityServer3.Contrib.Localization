@@ -54,7 +54,7 @@ namespace Unittests
         [Theory]
         [InlineData("")]
         [InlineData("notexisting")]
-        public void ThrowsExceptionForUnknownLocales(string locale)
+        public void DoesNotThrowsExceptionForUnknownLocales(string locale)
         {
             var options = new LocaleOptions
             {
@@ -63,7 +63,9 @@ namespace Unittests
 
             var envServiceMock = new Fake<OwinEnvironmentService>().FakedObject;
 
-            Assert.Throws<ApplicationException>(() => new GlobalizedLocalizationService(envServiceMock, options));
+            var service = new GlobalizedLocalizationService(envServiceMock, options);
+
+            //var dontCare = service.GetString(IdSrvConstants.Messages, MessageIds.MissingClientId);
         }
 
         [Fact]

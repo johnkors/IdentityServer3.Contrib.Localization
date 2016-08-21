@@ -11,7 +11,7 @@ namespace IdentityServer3.Core.Services.Contrib
         {
             _internalOpts = options ?? new LocaleOptions();
             _internalOpts.EnvironmentService = owinEnvironmentService;
-            _internalOpts.Validate(GetAvailableLocales());
+            _internalOpts.Validate();
         }
 
         public string GetString(string category, string id)

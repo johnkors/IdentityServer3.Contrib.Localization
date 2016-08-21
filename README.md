@@ -13,19 +13,27 @@ Implementation of IdentityServerV3's ILocalizationService.
 
 - Specific culture:
 ```
-   var options = new LocaleOptions { Locale = "nb-NO" };
-   var localizationService = new GlobalizedLocalizationService(options);
+   var factory = new IdentityServerServiceFactory();
+   var options = new LocaleOptions { LocaleProvider = env => "nb-NO" };
+
+   factory.Register(new Registration<LocaleOptions>(options));   
+   factory.LocalizationService = new Registration<ILocalizationService, GlobalizedLocalizationService>();
 ```
 
-- To use IdentityServer3s default provided localization:
+- To use IdentityServer3s default provided localization fixed:
 ```
-   var localizationService = new GlobalizedLocalizationService();
+   var factory = new IdentityServerServiceFactory();
+   factory.LocalizationService = new Registration<ILocalizationService, GlobalizedLocalizationService>();
 ```
 
-- Pirate culture:
+- To use Pirate culture:
 ```
-   var options = new LocaleOptions { Locale = "pirate" }; // ye be warned!
-   var localizationService = new GlobalizedLocalizationService(options);
+   var factory = new IdentityServerServiceFactory();
+   var options = new LocaleOptions { LocaleProvider = env => "pirate" };
+
+   factory.Register(new Registration<LocaleOptions>(options));   
+   factory.LocalizationService = new Registration<ILocalizationService, GlobalizedLocalizationService>();
+
 ```
 
 
