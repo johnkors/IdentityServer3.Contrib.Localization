@@ -30,7 +30,7 @@ namespace IdentityServer3.Core.Services.Contrib
             {
                 return LocaleProvider(EnvironmentService.Environment);
             }
-            return Constants.Default;
+            return Constants.enUS;
         }
 
         internal OwinEnvironmentService EnvironmentService { get; set; }

@@ -6,50 +6,17 @@ namespace IdentityServer3.Core.Services.Contrib.Internals
 {
     internal static class LocalizationServiceFactory
     {
-        public static readonly IDictionary<string, ILocalizationService> AvailableLocalizationServices;
-
-        static LocalizationServiceFactory()
-        {
-            AvailableLocalizationServices = new Dictionary<string, ILocalizationService>
-            {
-                {Constants.Default, new DefaultLocalizationService()},
-                {Constants.Pirate, new PirateLocalizationService()}
-            };
-
-            AvailableLocalizationServices.Add(CreateResourceBased(Constants.arSa));
-            AvailableLocalizationServices.Add(CreateResourceBased(Constants.csCZ));
-            AvailableLocalizationServices.Add(CreateResourceBased(Constants.deDE));
-            AvailableLocalizationServices.Add(CreateResourceBased(Constants.daDK));
-            AvailableLocalizationServices.Add(CreateResourceBased(Constants.enGB));
-            AvailableLocalizationServices.Add(CreateResourceBased(Constants.enUS));
-            AvailableLocalizationServices.Add(CreateResourceBased(Constants.esAR));
-            AvailableLocalizationServices.Add(CreateResourceBased(Constants.esES));
-            AvailableLocalizationServices.Add(CreateResourceBased(Constants.fiFI));
-            AvailableLocalizationServices.Add(CreateResourceBased(Constants.frFR));
-            AvailableLocalizationServices.Add(CreateResourceBased(Constants.itIT));
-            AvailableLocalizationServices.Add(CreateResourceBased(Constants.nbNO));
-            AvailableLocalizationServices.Add(CreateResourceBased(Constants.nlNL));
-            AvailableLocalizationServices.Add(CreateResourceBased(Constants.plPL));
-            AvailableLocalizationServices.Add(CreateResourceBased(Constants.ptBR));
-            AvailableLocalizationServices.Add(CreateResourceBased(Constants.roRO));
-            AvailableLocalizationServices.Add(CreateResourceBased(Constants.ruRU));
-            AvailableLocalizationServices.Add(CreateResourceBased(Constants.svSE));
-            AvailableLocalizationServices.Add(CreateResourceBased(Constants.skSK));
-            AvailableLocalizationServices.Add(CreateResourceBased(Constants.trTR));
-            AvailableLocalizationServices.Add(CreateResourceBased(Constants.zhCN));
-        }
-
         public static ILocalizationService Create(LocaleOptions options)
         {
             var locale = options.GetLocale();
-       
-            var inner = AvailableLocalizationServices[locale];
+
+            var inner = new ResourceFileLocalizationService(new CultureInfo(locale));
 
             if (options.FallbackLocalizationService != null)
             {
                 return new FallbackDecorator(inner, options.FallbackLocalizationService);
             }
-            return new FallbackDecorator(inner, AvailableLocalizationServices[Constants.Default]);
+            return new FallbackDecorator(inner, new DefaultLocalizationService());
         }
 
         private static KeyValuePair<string, ILocalizationService> CreateResourceBased(string locale)

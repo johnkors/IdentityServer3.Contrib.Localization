@@ -2,11 +2,6 @@ namespace IdentityServer3.Core.Services.Contrib
 {
     public class Constants
     {
-
-        public const string Default = "Default";
-        public const string Pirate = "pirate";
-
-
         public const string arSa = "ar-SA";
 
         public const string csCZ = "cs-CZ";
@@ -24,6 +19,7 @@ namespace IdentityServer3.Core.Services.Contrib
 
         public const string itIT = "it-IT";
 
+        public const string nb = "nb";
         public const string nbNO = "nb-NO";
         public const string nlNL = "nl-NL";
 
