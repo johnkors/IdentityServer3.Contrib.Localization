@@ -7,14 +7,15 @@ namespace IdentityServer3.Core.Services.Contrib.Internals
 {
     internal static class LocalizationServiceFactory
     {
-        public static ILocalizationService Create(LocaleOptions options)
+        
+        public static ILocalizationService Create(LocaleOptions options, IDictionary<string, object> env)
         {
-            var locale = options.GetLocale();
+            var locale = options.GetLocale(env);
 
             var isLanguage = locale.Length == 2;
             if (isLanguage)
             {
-                locale = TranslateLanguageToLocale(locale);
+                locale = TranslateLanguageToLocale(locale.ToLower());
             }
 
             CultureInfo cultureInfo;
