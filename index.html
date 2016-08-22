@@ -48,22 +48,39 @@
 <h2>
 <a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
 
-<p>Specific culture:</p>
+<h4>Hard code a specific culture:</h4>
 
-<pre><code>   var options = new LocaleOptions { Locale = "nb-NO" };
-   var localizationService = new GlobalizedLocalizationService(options);
-</code></pre>
+<pre><code>   var factory = new IdentityServerServiceFactory();
+   var options = new LocaleOptions { LocaleProvider = env => "nb-NO" };
 
-<p>To use IdentityServer3s default provided localization:</p>
+   factory.Register(new Registration<LocaleOptions>(options));   
+   factory.LocalizationService = new Registration&lt;ILocalizationService, GlobalizedLocalizationService&gt;();</code></pre>
 
-<pre><code>   var localizationService = new GlobalizedLocalizationService();
-</code></pre>
+<h4>Provide language from accept header:</h4>
 
-<p>Pirate culture:</p>
+<pre><code>   // if you want to use StringWithQualityHeaderValue
+  using System.Net.Http.Headers; 
+ 
 
-<pre><code>   var options = new LocaleOptions { Locale = "pirate" }; // ye be warned!
-   var localizationService = new GlobalizedLocalizationService(options);
-</code></pre>
+  var opts = new LocaleOptions
+  {
+      LocaleProvider = env =>
+      {
+          var owinContext = new OwinContext(env);
+          var owinRequest = owinContext.Request;
+          var headers = owinRequest.Headers;
+          var accept_language_header = headers["accept-language"].ToString();
+          var languages = accept_language_header
+                              .Split(',')
+                              .Select(StringWithQualityHeaderValue.Parse)
+                              .OrderByDescending(s => s.Quality.GetValueOrDefault(1));
+         var locale = languages.First().Value;
+         return locale;
+      }
+  };
+  
+  factory.Register(new Registration<LocaleOptions>(opts));
+  factory.LocalizationService = new Registration&lt;ILocalizationService, GlobalizedLocalizationService\&gt;();</code></pre>
 
 <h2>
 <a id="test-section" class="anchor" href="#test-section" aria-hidden="true">
