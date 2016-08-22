@@ -11,7 +11,7 @@ Implementation of IdentityServerV3's ILocalizationService.
 
 ## Usage
 
-- Specific culture:
+- Set a specific culture for all users:
 ```
    var factory = new IdentityServerServiceFactory();
    var options = new LocaleOptions { LocaleProvider = env => "nb-NO" };
@@ -20,23 +20,7 @@ Implementation of IdentityServerV3's ILocalizationService.
    factory.LocalizationService = new Registration<ILocalizationService, GlobalizedLocalizationService>();
 ```
 
-- To use IdentityServer3s default provided localization fixed:
-```
-   var factory = new IdentityServerServiceFactory();
-   factory.LocalizationService = new Registration<ILocalizationService, GlobalizedLocalizationService>();
-```
-
-- To use Pirate culture:
-```
-   var factory = new IdentityServerServiceFactory();
-   var options = new LocaleOptions { LocaleProvider = env => "pirate" };
-
-   factory.Register(new Registration<LocaleOptions>(options));   
-   factory.LocalizationService = new Registration<ILocalizationService, GlobalizedLocalizationService>();
-
-```
-
-- Making use of the users language setting:
+- Making use of the users language setting from the browser:
 ```
 using System.Net.Http.Headers; // if you want to use StringWithQualityHeaderValue
  
