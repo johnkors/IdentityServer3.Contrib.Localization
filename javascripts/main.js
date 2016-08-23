@@ -24,36 +24,43 @@ nameApp.config(function($routeProvider) {
 
 nameApp.controller('LocalesCtrl', function ($scope, $http, $location, $window){
   
-  $http.get('http://localhost:7799/language').then(    
-    function(res) { 
-      $scope.locale = res.data;
-      $location.url($scope.locale);
-    }, 
-    function(data){ 
-      console.log("fuck! Falling back to swearing in danish.");
-      $scope.locale = "de-DK";
-  });
-  
-  $scope.submitted = function(){
-      console.log("submitted!");
-      $location.url($scope.locale);
+  var url =  $location.url();  
+  if(!url){    
+    
+    // get browser language
+    $http.get('http://localhost:7799/language').then(    
+      function(res) { 
+        $scope.locale = res.data;
+        $location.url($scope.locale);        
+      }, 
+      function(data){      
+        $scope.locale = "de-DK";
+    });
+  }else{    
+    
+    // use default
+    $scope.locale = url.substring(1, url.length);
+  }
+
+
+
+  $scope.submitted = function(){      
+      $location.url($scope.locale);      
   }
 });
 
 nameApp.controller('LocaleDetailsCtr', function ($scope, $http, $routeParams, $location, $anchorScroll){
-
+    $scope.locale = $routeParams.locale;
     $scope.given = $scope.locale;
-
+    
     $http.get('http://localhost:7799/locale/' + $scope.locale).then(    
       function(res) { 
-          $scope.fetched = res.data.locale;       
-          console.log(res);
+          $scope.fetched = res.data.locale;
           $scope.translations = res.data.translations;
           $scope.headerlanguage = res.data.headerLanguage        
           $scope.localeDetails = res.data;
       }, 
-      function(data){ 
-        console.log("fuck!")
+      function(data){        
     });
     
     var old = $location.hash();
