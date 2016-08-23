@@ -1,0 +1,8 @@
+form {
+  padding:0px;
+}
+
+input[type=text], input[type=submit] {
+  margin: 3px;
+  padding:10px;
+}

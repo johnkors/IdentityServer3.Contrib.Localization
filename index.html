@@ -7,6 +7,7 @@
     <meta name="description" content="Identityserver3.Contrib.Localization : Localization support for IdentityServer3">
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/john.css">
 
     <title>IdentityServer3.Contrib.Localization</title>
   </head>
@@ -84,10 +85,14 @@
 
 <h2>
 <a id="test-section" class="anchor" href="#test-section" aria-hidden="true">
-  <span class="octicon octicon-link"></span></a>Live view of supported translations
+  <span class="octicon octicon-link"></span></a>Live view of supported translations  
 </h2>
 
-<div ng-app="TestApp">
+<div ng-app="TestApp" ng-controller="LocalesCtrl">
+  <form ng-submit="submitted()">
+    <input type="text" placeholder="Locale or language (en-US / en)"  ng-model="locale" />
+    <input type="submit" value="Test it!">
+  </form>
   <div ng-view>
   </div>
 </div>
@@ -139,8 +144,12 @@ How to add another language:
       </footer>
     </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.10/angular-route.min.js"></script>
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.10/angular-route.min.js"></script>-->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.min.js"></script>
+
   <script src="javascripts/main.js" type="text/javascript" ></script>
   </body>
 </html>
