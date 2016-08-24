@@ -28,7 +28,7 @@ nameApp.controller('LocalesCtrl', function ($scope, $http, $location, $window){
   if(!url){    
     
     // get browser language
-    $http.get('http://localhost:7799/language').then(    
+    $http.get('http://localeapi.apphb.com/language').then(    
       function(res) { 
         $scope.locale = res.data;
         $location.url($scope.locale);        
@@ -53,7 +53,7 @@ nameApp.controller('LocaleDetailsCtr', function ($scope, $http, $routeParams, $l
     $scope.locale = $routeParams.locale;
     $scope.given = $scope.locale;
     
-    $http.get('http://localhost:7799/locale/' + $scope.locale).then(    
+    $http.get('http://localeapi.apphb.com/locale/' + $scope.locale).then(    
       function(res) { 
           $scope.fetched = res.data.locale;
           $scope.translations = res.data.translations;
