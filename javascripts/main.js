@@ -9,10 +9,6 @@ var nameApp = angular.module('TestApp', ['ngRoute']);
 
 nameApp.config(function($routeProvider) {
   $routeProvider.
-    when('/', {
-      templateUrl: 'locales.html',
-      controller: 'LocalesCtrl'
-    }).
     when('/:locale', {
       templateUrl: 'localeDetails.html',
       controller: 'LocaleDetailsCtr'
