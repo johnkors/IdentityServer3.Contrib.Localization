@@ -48,7 +48,7 @@ using System.Net.Http.Headers; // if you want to use StringWithQualityHeaderValu
 ```
 
 ## Supported languages
- * See the [live docs of all translations](http://johnkors.github.io/IdentityServer3.Contrib.Localization/#/Default)
+ * See the [live docs of all translations](http://johnkors.github.io/IdentityServer3.Contrib.Localization/)
 
 ## Install
 
