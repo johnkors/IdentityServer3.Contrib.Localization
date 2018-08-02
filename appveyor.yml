@@ -27,7 +27,7 @@
   deploy:
     provider: NuGet
     api_key:
-      secure: di77CstF0jvvy/vMgIrYsvrL8ErTWxKbAImcUDdUERD/Zosdta7uM07XuW19vweY
+      secure: lab/HlB4ZP5vGaaq3GHH+AKwRMqmBy7ASRbWP1mLVcml2Zb4UyCpjtNJHuh2dqh4
     artifact: /.*\.nupkg/
 
 # configuration for all branches starting from "dev-"
@@ -60,7 +60,7 @@
   deploy:
     provider: NuGet
     api_key:
-      secure: di77CstF0jvvy/vMgIrYsvrL8ErTWxKbAImcUDdUERD/Zosdta7uM07XuW19vweY
+      secure: lab/HlB4ZP5vGaaq3GHH+AKwRMqmBy7ASRbWP1mLVcml2Zb4UyCpjtNJHuh2dqh4
     artifact: /.*\.nupkg/
 
 # "fall back" configuration for all other branches
