@@ -55,6 +55,7 @@ namespace IdentityServer3.Core.Services.Contrib.Internals
                 {"fi", "fi-FI"},
                 {"fr", "fr-FR"},
                 {"it", "it-IT"},
+                {"ja", "ja-JP"},
                 {"nb", "nb-NO"},
                 {"nl", "nl-NL"},
                 {"pl", "pl-PL"},
